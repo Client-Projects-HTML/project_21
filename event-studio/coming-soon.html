@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Frame & Fable Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { charcoal: '#102A43', ivory: '#F8ECD6', accent: '#D69D30' } },
+          fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="bg-brand-charcoal text-brand-ivory min-h-screen flex flex-col justify-between p-6 md:p-12 relative overflow-hidden">
+
+  <!-- Top Logo & Controls -->
+  <div class="max-w-7xl w-full mx-auto flex justify-between items-center z-10">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-brand-ivory text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl">F</div>
+      <span class="font-serif text-xl tracking-wider font-semibold uppercase">Frame & Fable</span>
+    </a>
+
+    <div class="flex items-center gap-2">
+      <button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle theme" title="Toggle theme">
+        <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+        <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+      </button>
+      <button type="button" class="rtl-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+        <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Center Content -->
+  <div class="max-w-3xl w-full mx-auto text-center z-10 py-12 space-y-8">
+    <span class="text-xs uppercase tracking-[0.3em] font-mono text-brand-accent px-4 py-1.5 rounded-full border border-brand-accent/30 bg-black/40">
+      NEW EDITION REVEAL
+    </span>
+
+    <h1 class="font-serif text-4xl sm:text-6xl font-normal leading-tight">
+      Something Extraordinary <br>
+      <span class="italic text-brand-accent">Is In The Lens.</span>
+    </h1>
+
+    <p class="text-neutral-300 text-base max-w-lg mx-auto font-light leading-relaxed">
+      We are unveiling our 2027 visual film archives and private destination wedding bookings suite shortly.
+    </p>
+
+    <!-- Countdown timer UI -->
+    <div class="grid grid-cols-4 gap-4 max-w-md mx-auto pt-4">
+      <div class="p-4 bg-white/5 border border-white/10 rounded-lg">
+        <span class="font-serif text-3xl font-bold block text-brand-accent">14</span>
+        <span class="text-[10px] uppercase tracking-widest text-neutral-400">Days</span>
+      </div>
+      <div class="p-4 bg-white/5 border border-white/10 rounded-lg">
+        <span class="font-serif text-3xl font-bold block text-brand-accent">08</span>
+        <span class="text-[10px] uppercase tracking-widest text-neutral-400">Hours</span>
+      </div>
+      <div class="p-4 bg-white/5 border border-white/10 rounded-lg">
+        <span class="font-serif text-3xl font-bold block text-brand-accent">42</span>
+        <span class="text-[10px] uppercase tracking-widest text-neutral-400">Mins</span>
+      </div>
+      <div class="p-4 bg-white/5 border border-white/10 rounded-lg">
+        <span class="font-serif text-3xl font-bold block text-brand-accent">18</span>
+        <span class="text-[10px] uppercase tracking-widest text-neutral-400">Secs</span>
+      </div>
+    </div>
+
+    <!-- Email Signup -->
+    <form id="notify-form" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 pt-6">
+      <input type="email" placeholder="Enter your email address" required class="flex-1 px-4 py-3 rounded bg-white/10 border border-white/20 text-white placeholder-neutral-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <button type="submit" class="px-6 py-3 bg-brand-ivory text-brand-charcoal text-xs uppercase font-semibold tracking-wider rounded hover:bg-white transition-colors">
+        Notify Me
+      </button>
+    </form>
+  </div>
+
+  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer" class="z-10 relative"></footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script>
+    document.getElementById('notify-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Thank you! You will be notified upon our new edition release.', 'success');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

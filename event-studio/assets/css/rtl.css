@@ -1,0 +1,38 @@
+/* ==========================================================================
+   FRAME & FABLE - RTL Styles System
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .font-display {
+  letter-spacing: normal;
+}
+
+/* Flex/Grid Direction Adjustments */
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Icon transformations for directional indicators */
+[dir="rtl"] .rtl-icon-flip {
+  transform: scaleX(-1);
+}
+
+/* Dashboard Sidebar placement when RTL */
+[dir="rtl"] .dashboard-sidebar {
+  border-right-width: 0;
+  border-left-width: 1px;
+}
+
+/* Form input icon positioning in RTL */
+[dir="rtl"] .form-icon-left {
+  left: auto;
+  right: 0.75rem;
+}
+
+[dir="rtl"] .form-input-with-left-icon {
+  padding-left: 0.75rem;
+  padding-right: 2.5rem;
+}

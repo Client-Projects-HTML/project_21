@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame & Fable | Luxury Event Photography & Cinematic Films</title>
+  <meta name="description" content="Frame & Fable is a premier photography and cinematography studio specializing in weddings, corporate galas, and private events. Capturing timeless stories worldwide.">
+  <meta name="keywords" content="wedding photography, corporate videography, event photographer, cinematic wedding film, event studio">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Frame & Fable | Luxury Event Photography & Films">
+  <meta property="og:description" content="Stories Worth Remembering. Luxury event photography and films for weddings, corporate galas, and private events.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frameandfable.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://frameandfable.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#102A43',
+              ivory: '#F8ECD6',
+              accent: '#D69D30'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhotographyBusiness",
+    "name": "Frame & Fable Studio",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552",
+    "@id": "https://frameandfable.com",
+    "url": "https://frameandfable.com",
+    "telephone": "+1-555-839-2000",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Creative Avenue, Studio Suite 800",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header min-h-[72px] fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[72px] py-3">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
+          <div class="w-10 h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl group-hover:scale-105 transition-transform shadow-sm">
+            F
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory">Frame & Fable</span>
+            <span class="text-[10px] tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          <a href="index.html" class="text-sm font-medium text-brand-charcoal dark:text-brand-ivory border-b-2 border-brand-charcoal dark:border-brand-ivory pb-0.5">Home</a>
+          <a href="services.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Services</a>
+          <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
+          <a href="portfolio.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Header CTAs & Toggles -->
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Controls: Dark Mode & RTL -->
+          <div class="flex items-center gap-2">
+            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+              <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+              <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+            </button>
+            
+            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+              <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Primary CTA -->
+          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 rounded shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Controls & Hamburger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button type="button" id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg transition-colors" aria-expanded="false" aria-label="Open Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-full h-full bg-white dark:bg-neutral-900 z-50 transform translate-x-full rtl:-translate-x-full transition-transform duration-300 ease-in-out hidden flex flex-col justify-between p-6 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-neutral-200 dark:border-neutral-800">
+        <span class="font-serif text-lg font-bold tracking-wider text-brand-charcoal dark:text-brand-ivory">FRAME & FABLE</span>
+        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Mobile Menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-5" aria-label="Mobile Navigation">
+        <a href="index.html" class="text-base font-medium text-brand-charcoal dark:text-brand-ivory">Home</a>
+        <a href="services.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Services</a>
+        <a href="portfolio.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Portfolio</a>
+        <a href="about.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">About Studio</a>
+        <a href="booking.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Check Availability</a>
+        <a href="contact.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Contact Us</a>
+        <a href="dashboard.html" class="text-base font-medium text-amber-600 dark:text-amber-400 flex items-center gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
+      <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal rounded">
+        Check Availability
+      </a>
+      <a href="portfolio.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 rounded">
+        Explore Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="flex-1 pt-20">
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-brand-ivory text-brand-charcoal dark:bg-brand-charcoal dark:text-brand-ivory py-24">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85" alt="Luxury wedding cinematography hero" class="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-ivory/90 via-brand-ivory/30 to-transparent dark:from-black/80 dark:via-brand-charcoal/95"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Eyebrow -->
+        <span class="inline-block text-xs md:text-sm uppercase tracking-[0.3em] font-mono text-brand-accent mb-6 px-4 py-1.5 rounded-full border border-brand-accent/30 bg-black/40 backdrop-blur-sm">
+          PHOTOGRAPHY • FILMS • STORIES
+        </span>
+
+        <!-- Headline -->
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.1] tracking-tight mb-8">
+          Stories Worth <br>
+          <span class="italic font-light text-brand-charcoal dark:text-brand-ivory">Remembering.</span>
+        </h1>
+
+        <!-- Supporting text -->
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-neutral-700 dark:text-neutral-300 font-sans font-light leading-relaxed mb-10">
+          Premium photography and cinematic films for weddings, corporate celebrations, birthdays, and unforgettable moments.
+        </p>
+
+        <!-- Hero CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <a href="booking.html" class="w-full sm:w-auto px-8 py-4 bg-brand-ivory text-brand-charcoal hover:bg-white dark:bg-brand-ivory dark:text-brand-charcoal dark:hover:bg-white/10 text-xs uppercase tracking-[0.2em] font-semibold rounded shadow-lg transition-all transform hover:-translate-y-0.5">
+            Check Availability
+          </a>
+          <a href="portfolio.html" class="w-full sm:w-auto px-8 py-4 border border-brand-charcoal text-brand-charcoal hover:bg-brand-ivory/80 dark:border-brand-ivory/40 dark:text-brand-ivory dark:hover:bg-white/10 text-xs uppercase tracking-[0.2em] font-semibold rounded transition-all">
+            Explore Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: FEATURED SERVICES -->
+    <section class="py-24 bg-brand-ivory/40 dark:bg-neutral-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Specialized Disciplines</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Crafted Creative Services</h2>
+          </div>
+          <p class="text-neutral-600 dark:text-neutral-400 max-w-md text-sm mt-4 md:mt-0">
+            Tailored visual storytelling for private milestones, grand celebrations, and high-impact brand gatherings.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1: Weddings -->
+          <div class="group bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+            <div class="aspect-photo overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Wedding Photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-sm text-brand-ivory text-[10px] uppercase tracking-widest px-3 py-1 rounded">01</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-3">Wedding Stories</h3>
+                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400 mb-6">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Full-day wedding photography</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Pre-wedding editorial sessions</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> 4K Cinematic wedding films</li>
+                </ul>
+              </div>
+              <a href="services.html" class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 transition-colors">
+                Explore Service <i data-lucide="arrow-right" class="w-4 h-4 ml-2 rtl-icon-flip"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Corporate -->
+          <div class="group bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+            <div class="aspect-photo overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Event Coverage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-sm text-brand-ivory text-[10px] uppercase tracking-widest px-3 py-1 rounded">02</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-3">Corporate Moments</h3>
+                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400 mb-6">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Executive conferences & galas</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> High-impact brand activations</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Same-day media delivery</li>
+                </ul>
+              </div>
+              <a href="services.html" class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 transition-colors">
+                Explore Service <i data-lucide="arrow-right" class="w-4 h-4 ml-2 rtl-icon-flip"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Birthdays & Private -->
+          <div class="group bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-lg overflow-hidden flex flex-col hover:shadow-xl transition-all duration-300">
+            <div class="aspect-photo overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Birthday & Private Celebrations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-sm text-brand-ivory text-[10px] uppercase tracking-widest px-3 py-1 rounded">03</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-3">Birthday & Private Events</h3>
+                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400 mb-6">
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Milestone birthday celebrations</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Intimate family portraits</li>
+                  <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-600"></i> Highlight recap video clips</li>
+                </ul>
+              </div>
+              <a href="services.html" class="inline-flex items-center text-xs uppercase tracking-widest font-semibold text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 transition-colors">
+                Explore Service <i data-lucide="arrow-right" class="w-4 h-4 ml-2 rtl-icon-flip"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY CHOOSE US -->
+    <section class="py-24 bg-white dark:bg-neutral-950 border-y border-neutral-200/60 dark:border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">The Studio Standard</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Why Frame & Fable</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="p-8 border border-neutral-100 dark:border-neutral-800 rounded-lg bg-brand-ivory/20 dark:bg-neutral-900/40">
+            <span class="font-mono text-3xl font-light text-amber-600 mb-4 block">01</span>
+            <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Story-First Approach</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We focus on raw emotions and unscripted candid moments that capture the authentic spirit of your celebration.
+            </p>
+          </div>
+
+          <div class="p-8 border border-neutral-100 dark:border-neutral-800 rounded-lg bg-brand-ivory/20 dark:bg-neutral-900/40">
+            <span class="font-mono text-3xl font-light text-amber-600 mb-4 block">02</span>
+            <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Cinematic Equipment</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Equipped with dual 35mm full-frame sensors, prime lenses, sound suites, and aerial drones for film-grade output.
+            </p>
+          </div>
+
+          <div class="p-8 border border-neutral-100 dark:border-neutral-800 rounded-lg bg-brand-ivory/20 dark:bg-neutral-900/40">
+            <span class="font-mono text-3xl font-light text-amber-600 mb-4 block">03</span>
+            <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Experienced Team</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Seasoned directors, lead shooters, and colorists who seamlessly navigate high-profile, fast-paced event timelines.
+            </p>
+          </div>
+
+          <div class="p-8 border border-neutral-100 dark:border-neutral-800 rounded-lg bg-brand-ivory/20 dark:bg-neutral-900/40">
+            <span class="font-mono text-3xl font-light text-amber-600 mb-4 block">04</span>
+            <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Fast & Polished Delivery</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Receive your private online gallery preview within 72 hours, with full master color-graded files delivered promptly.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FEATURED PORTFOLIO MASONRY -->
+    <section class="py-24 bg-brand-ivory/30 dark:bg-neutral-900/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Visual Gallery</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Featured Portfolio</h2>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="flex flex-wrap gap-2 mt-6 md:mt-0" role="tablist">
+            <button type="button" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-full bg-brand-charcoal text-white dark:bg-brand-ivory dark:text-brand-charcoal transition-all" data-filter="all" aria-selected="true">All</button>
+            <button type="button" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-full bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 hover:bg-neutral-300 transition-all" data-filter="weddings" aria-selected="false">Weddings</button>
+            <button type="button" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-full bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 hover:bg-neutral-300 transition-all" data-filter="corporate" aria-selected="false">Corporate</button>
+            <button type="button" class="portfolio-filter-btn px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-full bg-neutral-200/80 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 hover:bg-neutral-300 transition-all" data-filter="birthdays" aria-selected="false">Birthdays</button>
+          </div>
+        </div>
+
+        <!-- Clean 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+          
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="The Coastal Wedding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Weddings</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">The Coastal Romance</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="corporate">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Global Tech Gala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Corporate</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">Global Tech Gala 2026</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="birthdays">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Private Birthday Soiree" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Birthdays</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">Vesper Private Soirée</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Estate Sunset Ceremony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Weddings</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">Estate Sunset Union</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="corporate">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Vanguard Summit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Corporate</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">Vanguard Executive Summit</h3>
+            </div>
+          </div>
+
+          <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer aspect-[4/3] bg-neutral-100 dark:bg-neutral-800 shadow-sm" data-category="birthdays">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Golden Jubilee Celebration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="portfolio-category text-xs uppercase tracking-widest text-amber-400 font-mono">Birthdays</span>
+              <h3 class="portfolio-title font-serif text-xl font-medium">Golden Jubilee Gala</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="portfolio.html" class="inline-flex items-center px-8 py-3 border border-brand-charcoal text-brand-charcoal dark:border-brand-ivory dark:text-brand-ivory hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded transition-colors">
+            View Full Gallery <i data-lucide="arrow-right" class="w-4 h-4 ml-2 rtl-icon-flip"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: STUDIO METRICS -->
+    <section class="py-20 bg-brand-charcoal text-brand-ivory border-y border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x rtl:lg:divide-x-reverse divide-neutral-800">
+          
+          <div class="p-4">
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-accent block mb-2">250+</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400">Events Captured</span>
+          </div>
+
+          <div class="p-4 pt-8 lg:pt-4">
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-accent block mb-2">8+</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400">Years Experience</span>
+          </div>
+
+          <div class="p-4 pt-8 lg:pt-4">
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-accent block mb-2">120K+</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400">Moments Preserved</span>
+          </div>
+
+          <div class="p-4 pt-8 lg:pt-4">
+            <span class="font-serif text-4xl sm:text-5xl font-light text-brand-accent block mb-2">98%</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400">Client Satisfaction</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PACKAGES PREVIEW -->
+    <section id="packages" class="py-24 bg-white dark:bg-neutral-950 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Transparent Investment</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Curated Experience Packages</h2>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-3">Demo pricing packages designed for flexibility and complete coverage peace of mind.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Essential -->
+          <div class="bg-brand-ivory/20 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-800 rounded-xl p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase tracking-widest font-mono text-neutral-500 block mb-2">Essential</span>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="font-serif text-4xl font-normal text-brand-charcoal dark:text-brand-ivory">$799</span>
+                <span class="text-xs text-neutral-500">/ starting base</span>
+              </div>
+              <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200/60 dark:border-neutral-800 pt-6 mb-8">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Up to 4 Hours Event Coverage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> 1 Senior Photographer</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> 250+ High-Res Edited Photos</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Private Online Gallery</li>
+                <li class="flex items-center gap-2 text-neutral-400"><i data-lucide="minus" class="w-4 h-4"></i> Videography film highlight</li>
+                <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-neutral-400"></i> 14-Day Delivery</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold border border-brand-charcoal text-brand-charcoal dark:border-brand-ivory dark:text-brand-ivory hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal rounded transition-colors">
+              Check Availability
+            </a>
+          </div>
+
+          <!-- Signature (Most Popular) -->
+          <div class="bg-brand-charcoal text-brand-ivory rounded-xl p-8 flex flex-col justify-between relative shadow-2xl scale-105 border-2 border-brand-accent">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-accent text-black text-[10px] uppercase font-bold tracking-widest px-4 py-1 rounded-full">
+              Most Popular
+            </span>
+            <div>
+              <span class="text-xs uppercase tracking-widest font-mono text-brand-accent block mb-2">Signature</span>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="font-serif text-5xl font-normal text-white">$1,499</span>
+                <span class="text-xs text-neutral-400">/ full milestone</span>
+              </div>
+              <ul class="space-y-3 text-sm text-neutral-300 border-t border-neutral-800 pt-6 mb-8">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Up to 8 Hours Event Coverage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> 2 Photographers + 1 Videographer</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> 500+ High-Res Edited Photos</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> 3-5 Min 4K Highlight Film</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Drone Aerial Footage included</li>
+                <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-brand-accent"></i> 10-Day Delivery</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="block w-full text-center py-3.5 text-xs uppercase tracking-widest font-semibold bg-brand-ivory text-brand-charcoal hover:bg-white rounded transition-colors shadow-md">
+              Check Availability
+            </a>
+          </div>
+
+          <!-- Cinematic -->
+          <div class="bg-brand-ivory/20 dark:bg-neutral-900/40 border border-neutral-200 dark:border-neutral-800 rounded-xl p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase tracking-widest font-mono text-neutral-500 block mb-2">Cinematic</span>
+              <div class="flex items-baseline gap-1 mb-6">
+                <span class="font-serif text-4xl font-normal text-brand-charcoal dark:text-brand-ivory">$2,499</span>
+                <span class="text-xs text-neutral-500">/ full multi-day</span>
+              </div>
+              <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 border-t border-neutral-200/60 dark:border-neutral-800 pt-6 mb-8">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Full Day / Multi-Day Coverage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> 3 Shooters (Photo + Video Director)</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Unlimited Edited Photos + RAW access</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Full Length Documentary Film</li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Custom Hardcover Linen Album</li>
+                <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-neutral-400"></i> 7-Day Express Delivery</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold border border-brand-charcoal text-brand-charcoal dark:border-brand-ivory dark:text-brand-ivory hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal rounded transition-colors">
+              Check Availability
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TESTIMONIALS -->
+    <section class="py-24 bg-brand-ivory/40 dark:bg-neutral-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Client Voices</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Enduring Impressions</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 p-8 rounded-lg flex flex-col justify-between">
+            <p class="text-sm text-neutral-700 dark:text-neutral-300 italic leading-relaxed font-serif mb-6">
+              "Frame & Fable captured our wedding day with an artistry we didn't know was possible. Looking through our gallery feels like stepping back into the magic of the moment."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center font-serif text-sm font-bold">
+                E&M
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-brand-charcoal dark:text-brand-ivory">Eleanor & Marcus</h3>
+                <span class="text-xs text-neutral-500 font-mono">Wedding Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 p-8 rounded-lg flex flex-col justify-between">
+            <p class="text-sm text-neutral-700 dark:text-neutral-300 italic leading-relaxed font-serif mb-6">
+              "Their team operated with complete professionalism during our annual 3-day tech summit. The same-day media turnarounds were critical for our PR release."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center font-serif text-sm font-bold">
+                VT
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-brand-charcoal dark:text-brand-ivory">Victor Tremblay</h3>
+                <span class="text-xs text-neutral-500 font-mono">Corporate Event Director</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 p-8 rounded-lg flex flex-col justify-between">
+            <p class="text-sm text-neutral-700 dark:text-neutral-300 italic leading-relaxed font-serif mb-6">
+              "The birthday highlight film produced for my mother's 70th was breathtaking. They blend seamlessly into the party and catch every authentic laugh."
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center font-serif text-sm font-bold">
+                SL
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-brand-charcoal dark:text-brand-ivory">Sophia Laurent</h3>
+                <span class="text-xs text-neutral-500 font-mono">Private Celebration Host</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: AVAILABILITY CTA -->
+    <section class="py-24 bg-neutral-950 text-brand-ivory relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(197,160,89,0.15),_transparent_35%),linear-gradient(180deg,_rgba(17,17,17,0.92),_rgba(17,17,17,0.98))]"></div>
+      <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <h2 class="font-serif text-4xl sm:text-5xl font-normal mb-6">
+          Your date matters. <br>
+          <span class="italic font-light text-brand-accent">Let's make it unforgettable.</span>
+        </h2>
+        <p class="text-neutral-300 max-w-xl mx-auto text-sm sm:text-base mb-8 font-light">
+          Dates fill early for peak wedding and gala seasons. Check availability with our studio team today.
+        </p>
+        <a href="booking.html" class="inline-block px-9 py-4 bg-brand-ivory text-brand-charcoal hover:bg-white text-xs uppercase tracking-[0.2em] font-semibold rounded transition-transform transform hover:scale-105 shadow-xl">
+          Check Your Date
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

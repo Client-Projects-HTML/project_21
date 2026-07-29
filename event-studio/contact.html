@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Frame & Fable Studio</title>
+  <meta name="description" content="Get in touch with Frame & Fable Studio. Studio address, phone, email, and interactive inquiry form.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { charcoal: '#102A43', ivory: '#F8ECD6', accent: '#D69D30' } },
+          fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header min-h-[72px] fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[72px] py-3">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
+          <div class="w-10 h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl group-hover:scale-105 transition-transform shadow-sm">
+            F
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory">Frame & Fable</span>
+            <span class="text-[10px] tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          <a href="index.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Services</a>
+          <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
+          <a href="portfolio.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-brand-charcoal dark:text-brand-ivory border-b-2 border-brand-charcoal dark:border-brand-ivory pb-0.5">Contact</a>
+        </nav>
+
+        <!-- Right Side Header CTAs & Toggles -->
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Controls: Dark Mode & RTL -->
+          <div class="flex items-center gap-2">
+            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+              <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+              <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+            </button>
+            
+            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+              <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Primary CTA -->
+          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 rounded shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Controls & Hamburger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button type="button" id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg transition-colors" aria-expanded="false" aria-label="Open Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-full h-full bg-white dark:bg-neutral-900 z-50 transform translate-x-full rtl:-translate-x-full transition-transform duration-300 ease-in-out hidden flex flex-col justify-between p-6 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-neutral-200 dark:border-neutral-800">
+        <span class="font-serif text-lg font-bold tracking-wider text-brand-charcoal dark:text-brand-ivory">FRAME & FABLE</span>
+        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Navigation">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-4" aria-label="Mobile Navigation">
+        <a href="index.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Home</a>
+        <a href="services.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Services</a>
+        <a href="services.html#packages" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
+        <a href="portfolio.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Portfolio</a>
+        <a href="about.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">About Studio</a>
+        <a href="contact.html" class="text-base font-medium text-amber-600 dark:text-amber-400">Contact Us</a>
+        <a href="booking.html" class="inline-block text-center mt-4 px-5 py-3 text-sm uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal rounded shadow transition-opacity">
+          Check Availability
+        </a>
+        <a href="dashboard.html" class="text-base font-medium text-amber-600 dark:text-amber-400 flex items-center gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content" class="flex-1 pt-20">
+
+    <section class="py-16 bg-brand-charcoal text-brand-ivory text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-accent font-mono">Connect With Us</span>
+        <h1 class="font-serif text-4xl sm:text-5xl font-normal mt-2 mb-3">Get in Touch</h1>
+        <p class="text-neutral-300 text-sm max-w-xl mx-auto font-light leading-relaxed">
+          We look forward to discussing your upcoming wedding, corporate gala, or private event.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- CONTACT INFO & MAP (5 cols) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-6">Studio Information</h2>
+              
+              <ul class="space-y-6 text-sm text-neutral-600 dark:text-neutral-300">
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Headquarters</strong>
+                    450 Creative Avenue, Studio Suite 800<br>New York, NY 10001
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Direct Email</strong>
+                    hello@frameandfable.com
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Phone & WhatsApp</strong>
+                    +1 (555) 839-2000
+                  </div>
+                </li>
+
+                <li class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Studio Hours</strong>
+                    Mon – Fri: 09:00 – 19:00 EST<br>Sat – Sun: By Appointment / Event Coverage
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <h3 class="text-xs uppercase tracking-wider font-semibold text-neutral-400 mb-4">Follow Studio Work</h3>
+              <div class="flex space-x-4 rtl:space-x-reverse">
+                <a href="#" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="Instagram">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="Vimeo">
+                  <i data-lucide="video" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="LinkedIn">
+                  <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Google Maps Placeholder Container -->
+            <div class="mt-8 rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 p-6 text-center">
+              <!-- GOOGLE MAPS API INTEGRATION PLACEHOLDER
+                   To enable live map:
+                   <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=New+York" class="w-full h-48 border-0"></iframe>
+              -->
+              <div class="flex flex-col items-center justify-center h-44 text-neutral-400 space-y-2">
+                <i data-lucide="map" class="w-8 h-8 text-amber-600"></i>
+                <span class="text-xs font-mono">Interactive Studio Map Placeholder</span>
+                <span class="text-[10px]">450 Creative Avenue, New York, NY</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CONTACT FORM (7 cols) -->
+          <div class="lg:col-span-7">
+            <form id="contact-form" class="space-y-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-xl shadow-sm">
+              <h2 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Send a Message</h2>
+              <p class="text-xs text-neutral-500 mb-6">For general studio inquiries, press, or press kit requests.</p>
+
+              <div>
+                <label for="c-name" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Your Name *</label>
+                <input type="text" id="c-name" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:ring-2 focus:ring-amber-500" placeholder="Full Name" required>
+              </div>
+
+              <div>
+                <label for="c-email" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Email Address *</label>
+                <input type="email" id="c-email" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:ring-2 focus:ring-amber-500" placeholder="email@domain.com" required>
+              </div>
+
+              <div>
+                <label for="c-phone" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Phone</label>
+                <input type="tel" id="c-phone" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:ring-2 focus:ring-amber-500" placeholder="+1 (555) 000-0000">
+              </div>
+
+              <div>
+                <label for="c-message" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Message *</label>
+                <textarea id="c-message" rows="5" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:ring-2 focus:ring-amber-500" placeholder="How can our studio team assist you?" required></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-95 font-semibold text-xs uppercase tracking-[0.2em] rounded shadow-md transition-all">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Message sent successfully! We will get back to you within 24 hours.', 'success');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

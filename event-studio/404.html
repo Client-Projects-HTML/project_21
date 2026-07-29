@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame Not Found | Frame & Fable Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { charcoal: '#102A43', ivory: '#F8ECD6', accent: '#D69D30' } },
+          fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="bg-brand-charcoal text-brand-ivory min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="p-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-brand-ivory text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl">F</div>
+        <span class="font-serif text-xl tracking-wider font-semibold uppercase">Frame & Fable</span>
+      </a>
+
+      <div class="flex items-center gap-2">
+        <button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+        </button>
+        <button type="button" class="rtl-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 404 Hero -->
+  <main class="flex-1 max-w-3xl mx-auto px-4 text-center py-16 space-y-6">
+    <span class="font-mono text-6xl sm:text-8xl font-extralight text-brand-accent tracking-widest block">404</span>
+    
+    <h1 class="font-serif text-4xl sm:text-5xl font-normal">Frame Not Found</h1>
+    
+    <p class="text-neutral-400 text-base max-w-md mx-auto font-light leading-relaxed">
+      The moment you're looking for may have moved or no longer exists in our visual archive.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+      <a href="index.html" class="w-full sm:w-auto px-8 py-3.5 bg-brand-ivory text-brand-charcoal hover:bg-white text-xs uppercase tracking-[0.2em] font-semibold rounded shadow-md transition-all">
+        Back Home
+      </a>
+      <a href="portfolio.html" class="w-full sm:w-auto px-8 py-3.5 border border-brand-ivory/40 text-brand-ivory hover:bg-white/10 text-xs uppercase tracking-[0.2em] font-semibold rounded transition-all">
+        View Portfolio
+      </a>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>

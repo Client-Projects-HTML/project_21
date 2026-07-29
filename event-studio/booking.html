@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Event Availability | Frame & Fable Studio</title>
+  <meta name="description" content="Check event date availability and submit a studio booking enquiry for wedding, corporate, or private event photography & videography.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { charcoal: '#102A43', ivory: '#F8ECD6', accent: '#D69D30' } },
+          fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header min-h-[72px] fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[72px] py-3">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
+          <div class="w-10 h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl group-hover:scale-105 transition-transform shadow-sm">
+            F
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory">Frame & Fable</span>
+            <span class="text-[10px] tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          <a href="index.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Services</a>
+          <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
+          <a href="portfolio.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Header CTAs & Toggles -->
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Controls: Dark Mode & RTL -->
+          <div class="flex items-center gap-2">
+            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+              <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+              <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+            </button>
+            
+            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+              <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Primary CTA -->
+          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 rounded shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+            Check Availability
+          </a>
+        </div>
+
+        <!-- Mobile Controls & Hamburger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button type="button" id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg transition-colors" aria-expanded="false" aria-label="Open Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-full h-full bg-white dark:bg-neutral-900 z-50 transform translate-x-full rtl:-translate-x-full transition-transform duration-300 ease-in-out hidden flex flex-col justify-between p-6 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-neutral-200 dark:border-neutral-800">
+        <span class="font-serif text-lg font-bold tracking-wider text-brand-charcoal dark:text-brand-ivory">FRAME & FABLE</span>
+        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Navigation">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-4" aria-label="Mobile Navigation">
+        <a href="index.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Home</a>
+        <a href="services.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Services</a>
+        <a href="services.html#packages" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
+        <a href="portfolio.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Portfolio</a>
+        <a href="about.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">About Studio</a>
+        <a href="contact.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Contact Us</a>
+        <a href="booking.html" class="inline-block text-center mt-4 px-5 py-3 text-sm uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal rounded shadow transition-opacity">
+          Check Availability
+        </a>
+        <a href="dashboard.html" class="text-base font-medium text-amber-600 dark:text-amber-400 flex items-center gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main-content" class="flex-1 pt-20">
+
+    <section class="py-16 bg-brand-charcoal text-brand-ivory text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-accent font-mono">Reserve Studio Dates</span>
+        <h1 class="font-serif text-4xl sm:text-5xl font-normal mt-2 mb-3">Check Your Event Date</h1>
+        <p class="text-neutral-300 text-sm max-w-xl mx-auto font-light leading-relaxed">
+          Tell us a little about your event and we'll check availability with our studio team.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- CALENDAR AVAILABILITY UI (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-brand-ivory/30 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-xl shadow-sm">
+              
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-neutral-200 dark:border-neutral-800">
+                <h2 id="calendar-month-year" class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory">August 2026</h2>
+                <div class="flex space-x-1 rtl:space-x-reverse">
+                  <button type="button" id="calendar-prev" class="p-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-300" aria-label="Previous Month">
+                    <i data-lucide="chevron-left" class="w-5 h-5 rtl-icon-flip"></i>
+                  </button>
+                  <button type="button" id="calendar-next" class="p-2 rounded hover:bg-neutral-200 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-300" aria-label="Next Month">
+                    <i data-lucide="chevron-right" class="w-5 h-5 rtl-icon-flip"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Day headers -->
+              <div class="grid grid-cols-7 text-center text-xs font-semibold text-neutral-500 uppercase mb-2">
+                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+              </div>
+
+              <!-- Calendar Grid -->
+              <div id="calendar-grid" class="grid grid-cols-7 gap-1"></div>
+
+              <!-- Status Legend -->
+              <div class="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-around text-xs text-neutral-600 dark:text-neutral-400">
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Available</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Limited</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-rose-400 line-through"></span> Booked</span>
+              </div>
+
+              <!-- Selected Date Banner -->
+              <div id="date-status-message" class="hidden"></div>
+            </div>
+
+            <div class="p-6 bg-brand-charcoal text-brand-ivory rounded-xl space-y-3">
+              <h3 class="font-serif text-lg font-medium text-brand-accent">Studio Direct Concierge</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed">
+                Planning a multi-day international event or custom wedding shoot? You can also email our executive producer directly at <a href="mailto:hello@frameandfable.com" class="underline text-brand-ivory">hello@frameandfable.com</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- ENQUIRY FORM (7 cols) -->
+          <div class="lg:col-span-7">
+            <!-- Formspree / Netlify / Custom API comment placeholder -->
+            <!-- Form Integration Endpoint: action="https://formspree.io/f/YOUR_FORM_ID" method="POST" -->
+            
+            <form id="booking-form" class="space-y-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-xl shadow-sm" novalidate>
+              <h2 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory mb-2">Event Enquiry Details</h2>
+              <p class="text-xs text-neutral-500 mb-6">Required fields are marked with an asterisk (*).</p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <!-- Full Name -->
+                <div>
+                  <label for="full-name" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Full Name *</label>
+                  <input type="text" id="full-name" name="fullName" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="e.g. Eleanor Vance" required>
+                  <span id="full-name-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Email Address *</label>
+                  <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="eleanor@example.com" required>
+                  <span id="email-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Phone -->
+                <div>
+                  <label for="phone" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="+1 (555) 000-0000" required>
+                  <span id="phone-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Event Type -->
+                <div>
+                  <label for="event-type" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Event Type *</label>
+                  <select id="event-type" name="eventType" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                    <option value="">Select event category...</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Corporate Event">Corporate Event</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Private Event">Private Event</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span id="event-type-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Event Date -->
+                <div>
+                  <label for="event-date" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Event Date *</label>
+                  <input type="date" id="event-date" name="eventDate" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                  <span id="event-date-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Location -->
+                <div>
+                  <label for="event-location" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Event Location / Venue *</label>
+                  <input type="text" id="event-location" name="location" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="City or Venue Name" required>
+                  <span id="event-location-error" class="hidden text-xs text-rose-500 mt-1 block"></span>
+                </div>
+
+                <!-- Package -->
+                <div>
+                  <label for="package-select" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Photography Package</label>
+                  <select id="package-select" name="package" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <option value="Signature">Signature ($1,499) - Most Popular</option>
+                    <option value="Essential">Essential ($799)</option>
+                    <option value="Cinematic">Cinematic ($2,499)</option>
+                    <option value="Custom Package">Custom Package</option>
+                  </select>
+                </div>
+
+                <!-- Videography required -->
+                <div class="flex items-center pt-6">
+                  <label class="flex items-center gap-3 cursor-pointer">
+                    <input type="checkbox" id="video-required" name="videographyRequired" class="w-5 h-5 text-amber-600 rounded border-neutral-300 focus:ring-amber-500">
+                    <span class="text-sm font-medium text-neutral-700 dark:text-neutral-300">Require 4K Cinematic Videography coverage</span>
+                  </label>
+                </div>
+
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">Additional Details / Vision</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Tell us about your schedule, guest count, special requests..."></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-95 font-semibold text-xs uppercase tracking-[0.2em] rounded shadow-md transition-all">
+                Submit Availability Request
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="booking-success-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+    <div class="bg-white dark:bg-neutral-900 max-w-md w-full p-8 rounded-2xl text-center shadow-2xl space-y-4">
+      <div class="w-16 h-16 bg-emerald-100 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto">
+        <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-medium text-brand-charcoal dark:text-brand-ivory">Availability Request Received</h3>
+      <p class="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+        Thank you. Our studio team will review your date and contact you shortly with confirmation and pricing details.
+      </p>
+      <button type="button" onclick="document.getElementById('booking-success-modal').classList.add('hidden')" class="w-full py-3 bg-brand-charcoal text-white dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase font-semibold tracking-wider rounded">
+        Done
+      </button>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer"></footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

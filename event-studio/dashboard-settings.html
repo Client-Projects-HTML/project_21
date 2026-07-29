@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Settings | Frame & Fable Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { brand: { charcoal: '#102A43', ivory: '#F8ECD6', accent: '#D69D30' } },
+          fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 min-h-screen flex flex-col md:flex-row">
+
+  <!-- SIDEBAR -->
+  <aside id="dashboard-sidebar" class="dashboard-sidebar fixed md:sticky top-0 z-40 w-64 h-screen bg-brand-charcoal text-neutral-300 border-r border-neutral-800 flex flex-col justify-between p-6 transform -translate-x-full md:translate-x-0 rtl:translate-x-full rtl:md:translate-x-0 transition-transform duration-300">
+    <div>
+      <a href="index.html" class="flex items-center gap-3 pb-8 border-b border-neutral-800">
+        <div class="w-9 h-9 bg-brand-ivory text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-lg">F</div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg tracking-wider font-semibold text-white uppercase">Frame & Fable</span>
+          <span class="text-[9px] tracking-[0.2em] text-amber-400 uppercase font-mono">Admin Portal</span>
+        </div>
+      </a>
+
+      <nav class="mt-8 space-y-1.5" aria-label="Dashboard Sidebar">
+        <a href="dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium hover:bg-neutral-800 hover:text-white transition-colors">
+          <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Overview
+        </a>
+        <a href="dashboard-bookings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium hover:bg-neutral-800 hover:text-white transition-colors">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Bookings
+        </a>
+        <a href="dashboard-portfolio.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium hover:bg-neutral-800 hover:text-white transition-colors">
+          <i data-lucide="image" class="w-4 h-4"></i> Portfolio
+        </a>
+        <a href="dashboard-messages.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium hover:bg-neutral-800 hover:text-white transition-colors">
+          <i data-lucide="mail" class="w-4 h-4"></i> Messages / Enquiries
+        </a>
+        <a href="dashboard-settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium bg-neutral-800 text-white border-l-4 border-amber-500 rtl:border-l-0 rtl:border-r-4">
+          <i data-lucide="settings" class="w-4 h-4 text-amber-500"></i> Settings
+        </a>
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-md text-sm font-medium hover:bg-neutral-800 hover:text-white transition-colors text-neutral-400 pt-4 border-t border-neutral-800">
+          <i data-lucide="globe" class="w-4 h-4"></i> View Live Website
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-neutral-800 space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="text-xs text-neutral-400 font-mono">Theme & Layout</span>
+        <div class="flex items-center gap-2">
+          <button type="button" class="theme-toggle-btn w-8 h-8 rounded-lg bg-neutral-800 text-neutral-300 hover:bg-neutral-700 flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn w-8 h-8 rounded-lg bg-neutral-800 text-neutral-300 hover:bg-neutral-700 flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+      <a href="index.html" class="flex items-center gap-2 text-xs font-medium text-rose-400 hover:text-rose-300">
+        <i data-lucide="log-out" class="w-4 h-4"></i> Logout Admin
+      </a>
+    </div>
+  </aside>
+
+  <div id="dashboard-sidebar-overlay" class="fixed inset-0 bg-black/60 z-30 hidden md:hidden"></div>
+
+  <div class="flex-1 flex flex-col min-w-0">
+
+    <!-- Top Bar -->
+    <header class="bg-white dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800 px-6 py-4 flex items-center justify-between sticky top-0 z-20">
+      <div class="flex items-center gap-4">
+        <button type="button" id="dashboard-sidebar-toggle" class="p-2 text-neutral-600 dark:text-neutral-300 md:hidden">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+        <h1 class="text-xl font-serif font-medium text-neutral-900 dark:text-neutral-100">Studio Settings</h1>
+      </div>
+    </header>
+
+    <main class="p-6 sm:p-8 space-y-8 flex-1 max-w-4xl">
+
+      <form id="settings-form" class="space-y-8">
+        
+        <!-- SECTION 1: STUDIO INFO -->
+        <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-xl shadow-sm space-y-4">
+          <h2 class="font-serif text-lg font-medium text-neutral-900 dark:text-neutral-100 pb-2 border-b border-neutral-100 dark:border-neutral-800">
+            Studio Information
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block font-semibold uppercase text-neutral-600 dark:text-neutral-400 mb-1">Studio Brand Name</label>
+              <input type="text" value="Frame & Fable Studio" class="w-full px-3 py-2 border rounded dark:bg-neutral-800 dark:border-neutral-700 text-sm">
+            </div>
+
+            <div>
+              <label class="block font-semibold uppercase text-neutral-600 dark:text-neutral-400 mb-1">Primary Email</label>
+              <input type="email" value="hello@frameandfable.com" class="w-full px-3 py-2 border rounded dark:bg-neutral-800 dark:border-neutral-700 text-sm">
+            </div>
+
+            <div>
+              <label class="block font-semibold uppercase text-neutral-600 dark:text-neutral-400 mb-1">Phone</label>
+              <input type="tel" value="+1 (555) 839-2000" class="w-full px-3 py-2 border rounded dark:bg-neutral-800 dark:border-neutral-700 text-sm">
+            </div>
+
+            <div>
+              <label class="block font-semibold uppercase text-neutral-600 dark:text-neutral-400 mb-1">Default Currency</label>
+              <select class="w-full px-3 py-2 border rounded dark:bg-neutral-800 dark:border-neutral-700 text-sm">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: APPEARANCE & LAYOUT -->
+        <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-xl shadow-sm space-y-4">
+          <h2 class="font-serif text-lg font-medium text-neutral-900 dark:text-neutral-100 pb-2 border-b border-neutral-100 dark:border-neutral-800">
+            Appearance & RTL Controls
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            
+            <div class="flex items-center justify-between p-4 border rounded dark:border-neutral-800">
+              <div>
+                <span class="font-semibold block text-sm">Color Mode</span>
+                <span class="text-neutral-500">Switch between Light and Dark mode</span>
+              </div>
+              <button type="button" class="theme-toggle-btn px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded text-xs font-semibold">
+                Toggle Mode
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between p-4 border rounded dark:border-neutral-800">
+              <div>
+                <span class="font-semibold block text-sm">Text Direction (RTL)</span>
+                <span class="text-neutral-500">Toggle Right-to-Left document layout</span>
+              </div>
+              <button type="button" class="rtl-toggle-btn px-4 py-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded text-xs font-semibold">
+                Toggle RTL
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SECTION 3: NOTIFICATIONS -->
+        <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-xl shadow-sm space-y-4">
+          <h2 class="font-serif text-lg font-medium text-neutral-900 dark:text-neutral-100 pb-2 border-b border-neutral-100 dark:border-neutral-800">
+            Notification Preferences
+          </h2>
+
+          <div class="space-y-3 text-xs">
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked class="w-4 h-4 text-amber-600 rounded">
+              <span class="font-medium text-sm text-neutral-700 dark:text-neutral-300">Receive instant email notifications for new date availability enquiries</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked class="w-4 h-4 text-amber-600 rounded">
+              <span class="font-medium text-sm text-neutral-700 dark:text-neutral-300">Weekly revenue & booking analytics report summary</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="px-6 py-3 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase tracking-wider font-semibold rounded shadow-md">
+          Save Settings
+        </button>
+
+      </form>
+
+    </main>
+
+    <footer class="mt-auto py-6 px-6 border-t border-neutral-200 dark:border-neutral-800 text-xs text-neutral-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left rtl:sm:text-right">
+        <p>&copy; 2026 Frame & Fable Studio. All rights reserved.</p>
+        <span class="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
+        <p class="text-neutral-500 dark:text-neutral-400">Developed by Abhivorn Technologies Pvt. Ltd.</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-amber-500 transition-colors">View Main Site</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('settings-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Studio settings saved successfully!', 'success');
+    });
+  </script>
+</body>
+</html>
