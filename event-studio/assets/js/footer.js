@@ -5,7 +5,7 @@
 
 const FooterComponent = {
   render() {
-    const footerContainer = document.getElementById('site-footer');
+    const footerContainer = document.getElementById('site-footer') || document.getElementById('footer-container');
     if (!footerContainer) return;
 
     footerContainer.className = "bg-brand-ivory text-brand-charcoal border-t border-neutral-200 transition-colors duration-300 mt-auto dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-900";
@@ -66,12 +66,12 @@ const FooterComponent = {
           <div class="space-y-4">
             <h3 class="font-serif text-brand-charcoal dark:text-brand-ivory text-base font-medium border-b border-neutral-200 dark:border-neutral-800 pb-2">Quick Links</h3>
             <ul class="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-              <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+              <li><a href="index.html" class="hover:text-white transition-colors">Home 1: Classic</a></li>
+              <li><a href="home-2.html" class="hover:text-amber-400 font-semibold transition-colors">Home 2: Premium VIP</a></li>
               <li><a href="about.html" class="hover:text-white transition-colors">About Studio</a></li>
               <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
               <li><a href="services.html#packages" class="hover:text-amber-400 font-semibold transition-colors">Experience Packages</a></li>
               <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="portfolio.html" class="hover:text-white transition-colors">Gallery Lightbox</a></li>
               <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
               <li><a href="booking.html" class="hover:text-amber-400 transition-colors">Check Availability</a></li>
             </ul>

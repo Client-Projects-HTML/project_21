@@ -65,9 +65,42 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Desktop Navigation Links with Home Dropdown -->
         <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
-          <a href="index.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Home</a>
+          
+          <!-- Home Dropdown -->
+          <div class="relative group/nav-dropdown dropdown-container">
+            <button type="button" class="nav-dropdown-btn inline-flex items-center gap-1.5 text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors focus:outline-none py-1" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/nav-dropdown:rotate-180"></i>
+            </button>
+
+            <!-- Dropdown Menu Card -->
+            <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200/80 dark:border-neutral-800 p-2 space-y-1 opacity-0 invisible group-hover/nav-dropdown:opacity-100 group-hover/nav-dropdown:visible transition-all duration-200 z-50">
+              <a href="index.html" class="dropdown-item flex items-start gap-3 p-2.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/80 transition-colors group">
+                <div class="p-2 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 group-hover:bg-neutral-200 dark:group-hover:bg-neutral-700 transition-colors">
+                  <i data-lucide="layout-template" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-neutral-900 dark:text-neutral-100">Home 1: Classic</div>
+                  <div class="text-[11px] text-neutral-500 dark:text-neutral-400">Editorial grid & standard layout</div>
+                </div>
+              </a>
+              
+              <a href="home-2.html" class="dropdown-item flex items-start gap-3 p-2.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/80 transition-colors group">
+                <div class="p-2 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 group-hover:bg-amber-100 dark:group-hover:bg-amber-900 transition-colors">
+                  <i data-lucide="crown" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-1">
+                    Home 2: Premium <span class="px-1.5 py-0.2 text-[9px] uppercase bg-amber-500 text-white rounded font-mono">VIP</span>
+                  </div>
+                  <div class="text-[11px] text-neutral-500 dark:text-neutral-400">Bespoke cinema & luxury showcase</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <a href="services.html" class="text-sm font-medium text-brand-charcoal dark:text-brand-ivory border-b-2 border-brand-charcoal dark:border-brand-ivory pb-0.5">Services</a>
           <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
           <a href="portfolio.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Portfolio</a>
@@ -124,8 +157,25 @@
         </button>
       </div>
 
-      <nav class="mt-8 flex flex-col space-y-4" aria-label="Mobile Navigation">
-        <a href="index.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Home</a>
+      <nav class="mt-6 flex flex-col space-y-4" aria-label="Mobile Navigation">
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div>
+          <button type="button" id="mobile-home-dropdown-toggle" class="w-full flex items-center justify-between text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-amber-600 py-1 focus:outline-none">
+            <span class="flex items-center gap-2">
+              <i data-lucide="layout-template" class="w-4 h-4 text-neutral-500"></i> Home Options
+            </span>
+            <i data-lucide="chevron-down" class="w-4 h-4 mobile-dropdown-icon transition-transform"></i>
+          </button>
+          <div id="mobile-home-submenu" class="mt-2 ml-4 pl-3 border-l-2 border-neutral-200 dark:border-neutral-800 space-y-2">
+            <a href="index.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-brand-charcoal py-1">
+              Home 1: Classic Version
+            </a>
+            <a href="home-2.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-600 py-1">
+              Home 2: Premium VIP Version
+            </a>
+          </div>
+        </div>
+
         <a href="services.html" class="text-base font-medium text-amber-600 dark:text-amber-400">Services</a>
         <a href="services.html#packages" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
         <a href="portfolio.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Portfolio</a>
@@ -138,6 +188,7 @@
           <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
         </a>
       </nav>
+
     </div>
   </div>
 

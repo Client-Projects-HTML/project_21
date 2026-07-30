@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frame & Fable | Premium Bespoke Photography & Cinema</title>
+  <meta name="description" content="Frame & Fable Premium Studio. Ultra-luxury wedding photography, high-society gala films, and bespoke editorial portraiture for private clients worldwide.">
+  <meta name="keywords" content="luxury wedding photography, premium event cinema, VIP corporate gala videography, fine art wedding film">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Frame & Fable | Premium Bespoke Photography & Cinema">
+  <meta property="og:description" content="Elevating high-society celebrations, luxury weddings, and executive galas into timeless cinematic masterpieces.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://frameandfable.com/home-2.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://frameandfable.com/home-2.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              charcoal: '#102A43',
+              ivory: '#F8ECD6',
+              accent: '#D69D30'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+
+  <!-- Early Theme & RTL Restore Script to prevent FOUC -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('studioTheme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const rtl = localStorage.getItem('studioRTL');
+      if (rtl === 'rtl' || rtl === 'true') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
+    })();
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-brand-ivory/20 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header min-h-[72px] fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-neutral-200/60 dark:border-neutral-800/60 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between min-h-[72px] py-3">
+        
+        <!-- Logo -->
+        <a href="home-2.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
+          <div class="w-10 h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl group-hover:scale-105 transition-transform shadow-sm">
+            F
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory">Frame & Fable</span>
+            <span class="text-[10px] tracking-[0.25em] text-amber-600 dark:text-amber-400 uppercase font-mono font-semibold">Premium Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links with Home Dropdown -->
+        <nav class="hidden lg:flex items-center gap-6" aria-label="Main Navigation">
+          
+          <!-- Home Dropdown -->
+          <div class="relative group/nav-dropdown dropdown-container">
+            <button type="button" class="nav-dropdown-btn inline-flex items-center gap-1.5 text-sm font-medium text-brand-charcoal dark:text-brand-ivory hover:text-amber-600 dark:hover:text-amber-400 transition-colors focus:outline-none py-1" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover/nav-dropdown:rotate-180"></i>
+            </button>
+
+            <!-- Dropdown Menu Card -->
+            <div class="nav-dropdown-menu absolute top-full left-0 mt-2 w-64 bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200/80 dark:border-neutral-800 p-2 space-y-1 opacity-0 invisible group-hover/nav-dropdown:opacity-100 group-hover/nav-dropdown:visible transition-all duration-200 z-50">
+              <a href="index.html" class="dropdown-item flex items-start gap-3 p-2.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/80 transition-colors group">
+                <div class="p-2 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 group-hover:bg-amber-100 dark:group-hover:bg-amber-900 transition-colors">
+                  <i data-lucide="layout-template" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-semibold text-neutral-900 dark:text-neutral-100">Home 1: Classic</div>
+                  <div class="text-[11px] text-neutral-500 dark:text-neutral-400">Editorial grid & standard layout</div>
+                </div>
+              </a>
+              
+              <a href="home-2.html" class="dropdown-item flex items-start gap-3 p-2.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 transition-colors group">
+                <div class="p-2 rounded-md bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal transition-colors">
+                  <i data-lucide="crown" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-brand-charcoal dark:text-brand-ivory flex items-center gap-1">
+                    Home 2: Premium <span class="px-1.5 py-0.2 text-[9px] uppercase bg-amber-500 text-white rounded font-mono">VIP</span>
+                  </div>
+                  <div class="text-[11px] text-neutral-500 dark:text-neutral-400">Bespoke cinema & luxury showcase</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="services.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Services</a>
+          <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
+          <a href="portfolio.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Portfolio</a>
+          <a href="about.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Header CTAs & Toggles -->
+        <div class="hidden lg:flex items-center gap-4">
+          <!-- Controls: Dark Mode & RTL -->
+          <div class="flex items-center gap-2">
+            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+              <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+              <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+            </button>
+            
+            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+              <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Primary CTA -->
+          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-accent text-white hover:bg-amber-600 rounded shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+            VIP Availability
+          </a>
+        </div>
+
+        <!-- Mobile Controls & Hamburger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+          </button>
+          <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          <button type="button" id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg transition-colors" aria-expanded="false" aria-label="Open Navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 rtl:right-auto rtl:left-0 w-80 max-w-full h-full bg-white dark:bg-neutral-900 z-50 transform translate-x-full rtl:-translate-x-full transition-transform duration-300 ease-in-out hidden flex flex-col justify-between p-6 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-neutral-200 dark:border-neutral-800">
+        <span class="font-serif text-lg font-bold tracking-wider text-brand-charcoal dark:text-brand-ivory">FRAME & FABLE</span>
+        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Mobile Menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col space-y-4" aria-label="Mobile Navigation">
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div>
+          <button type="button" id="mobile-home-dropdown-toggle" class="w-full flex items-center justify-between text-base font-semibold text-brand-charcoal dark:text-brand-ivory py-1 focus:outline-none">
+            <span class="flex items-center gap-2">
+              <i data-lucide="crown" class="w-4 h-4 text-amber-500"></i> Home Options
+            </span>
+            <i data-lucide="chevron-down" class="w-4 h-4 mobile-dropdown-icon transition-transform"></i>
+          </button>
+          <div id="mobile-home-submenu" class="mt-2 ml-4 pl-3 border-l-2 border-amber-500 space-y-2">
+            <a href="index.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-brand-charcoal py-1">
+              Home 1: Classic Version
+            </a>
+            <a href="home-2.html" class="block text-sm font-semibold text-amber-600 dark:text-amber-400 py-1">
+              Home 2: Premium VIP Version
+            </a>
+          </div>
+        </div>
+
+        <a href="services.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Services</a>
+        <a href="portfolio.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Portfolio</a>
+        <a href="about.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">About Studio</a>
+        <a href="booking.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">VIP Availability</a>
+        <a href="contact.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900">Contact Us</a>
+        <a href="dashboard.html" class="text-base font-medium text-amber-600 dark:text-amber-400 flex items-center gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
+      <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold bg-brand-accent text-white rounded">
+        Check VIP Availability
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="flex-1 pt-20">
+
+    <!-- HERO SECTION: Premium Dual-Media Visual Canvas -->
+    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-neutral-950 text-white py-20 px-4 sm:px-6 lg:px-8">
+      
+      <!-- High Resolution Hero Image Container -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85" alt="Ultra luxury wedding cinema hero canvas" class="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-black/40"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-950/20 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto text-center">
+        
+        <!-- Live Metric Ticker Badge -->
+        <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 animate-ambient-float touch-tap-active">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-mono text-amber-300">
+            500+ High-Society Ceremonies • 40+ Destinations Worldwide
+          </span>
+        </div>
+
+        <!-- Premium Headline -->
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] tracking-tight mb-8">
+          Capturing Life’s Most <br>
+          <span class="italic font-light text-amber-200 underline decoration-amber-500/40 underline-offset-8">Prestigious Moments.</span>
+        </h1>
+
+        <!-- Supporting Text -->
+        <p class="max-w-3xl mx-auto text-base sm:text-xl text-neutral-300 font-sans font-light leading-relaxed mb-12">
+          Frame & Fable Premium Studio crafts bespoke cinematic films and couture photography for discerning couples, executive summits, and private estates.
+        </p>
+
+        <!-- Hero Actions: Private Consultation & Showreel Trigger -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          
+          <a href="booking.html" class="touch-card w-full sm:w-auto px-9 py-4 bg-brand-accent text-white hover:bg-amber-600 text-xs uppercase tracking-[0.25em] font-semibold rounded shadow-xl transition-all flex items-center justify-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Request VIP Consultation
+          </a>
+
+          <!-- Showreel Modal Trigger Button -->
+          <button type="button" id="open-showreel-btn" class="touch-card w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs uppercase tracking-[0.25em] font-semibold rounded transition-all flex items-center justify-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center">
+              <i data-lucide="play" class="w-4 h-4 fill-white ml-0.5"></i>
+            </span>
+            Watch Studio Showreel
+          </button>
+        </div>
+
+        <!-- Premium Trust Badges -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10 text-center">
+          <div class="p-3">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-amber-300">500+</div>
+            <div class="text-[11px] uppercase tracking-widest text-neutral-400 mt-1 font-mono">Luxury Ceremonies</div>
+          </div>
+          <div class="p-3">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-amber-300">4K / 8K</div>
+            <div class="text-[11px] uppercase tracking-widest text-neutral-400 mt-1 font-mono">Master Cinema</div>
+          </div>
+          <div class="p-3">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-amber-300">15+</div>
+            <div class="text-[11px] uppercase tracking-widest text-neutral-400 mt-1 font-mono">International Awards</div>
+          </div>
+          <div class="p-3">
+            <div class="font-serif text-2xl sm:text-3xl font-bold text-amber-300">100%</div>
+            <div class="text-[11px] uppercase tracking-widest text-neutral-400 mt-1 font-mono">Client Discretion</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1: BESPOKE VIP DISCIPLINES MATRIX -->
+    <section class="py-24 bg-white dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-[0.2em] bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+            Bespoke Craftsmanship
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-4">
+            Tailored Luxury Disciplines
+          </h2>
+          <p class="text-neutral-600 dark:text-neutral-400 text-base mt-4 font-light">
+            Every frame is composed with editorial precision, dynamic lighting, and museum-grade color calibration.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Discipline 1: Royal Weddings -->
+          <div class="touch-card bg-brand-ivory/30 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between p-6 shadow-sm hover:shadow-2xl transition-all">
+            <div>
+              <div class="aspect-photo rounded-xl overflow-hidden mb-6 relative">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Royal Wedding Cinema" class="w-full h-full object-cover">
+                <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-charcoal/90 text-brand-ivory text-[10px] font-mono rounded">
+                  01 / VIP WEDDING
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Bespoke Wedding Cinema</h3>
+              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                Multi-camera feature film production, aerial cinematography, and private editorial portraiture.
+              </p>
+              <ul class="space-y-2 text-xs text-neutral-700 dark:text-neutral-300 border-t border-neutral-200/60 dark:border-neutral-800 pt-4 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Full-Day Multi-Crew Coverage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> 4K Master Cinema Film</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Heirloom Fine Art Leather Album</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="w-full text-center py-2.5 px-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded hover:opacity-90 transition-opacity">
+              Inquire Coverage
+            </a>
+          </div>
+
+          <!-- Discipline 2: Executive Galas -->
+          <div class="touch-card bg-brand-ivory/30 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between p-6 shadow-sm hover:shadow-2xl transition-all">
+            <div>
+              <div class="aspect-photo rounded-xl overflow-hidden mb-6 relative">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Executive Galas" class="w-full h-full object-cover">
+                <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-charcoal/90 text-brand-ivory text-[10px] font-mono rounded">
+                  02 / GALAS
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">High-Society Galas</h3>
+              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                Discreet, high-impact photojournalism for celebrity galas, award ceremonies, and red-carpet galas.
+              </p>
+              <ul class="space-y-2 text-xs text-neutral-700 dark:text-neutral-300 border-t border-neutral-200/60 dark:border-neutral-800 pt-4 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Same-Day Press Release Delivery</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Red-Carpet Step & Repeat Team</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Encrypted Online VIP Gallery</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="w-full text-center py-2.5 px-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded hover:opacity-90 transition-opacity">
+              Inquire Coverage
+            </a>
+          </div>
+
+          <!-- Discipline 3: Destination Elopements -->
+          <div class="touch-card bg-brand-ivory/30 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between p-6 shadow-sm hover:shadow-2xl transition-all">
+            <div>
+              <div class="aspect-photo rounded-xl overflow-hidden mb-6 relative">
+                <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=600&q=80" alt="Destination Elopements" class="w-full h-full object-cover">
+                <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-charcoal/90 text-brand-ivory text-[10px] font-mono rounded">
+                  03 / DESTINATION
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Destination Estates</h3>
+              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                Worldwide travel coverage for private villas, island retreats, and historic European castles.
+              </p>
+              <ul class="space-y-2 text-xs text-neutral-700 dark:text-neutral-300 border-t border-neutral-200/60 dark:border-neutral-800 pt-4 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Multi-Day Itinerary Coverage</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Licensed FPV Drone Pilot</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Private Concierge Logistics</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="w-full text-center py-2.5 px-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded hover:opacity-90 transition-opacity">
+              Inquire Coverage
+            </a>
+          </div>
+
+          <!-- Discipline 4: Couture Portraiture -->
+          <div class="touch-card bg-brand-ivory/30 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between p-6 shadow-sm hover:shadow-2xl transition-all">
+            <div>
+              <div class="aspect-photo rounded-xl overflow-hidden mb-6 relative">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Couture Portraiture" class="w-full h-full object-cover">
+                <span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-charcoal/90 text-brand-ivory text-[10px] font-mono rounded">
+                  04 / PORTRAITURE
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Couture Portraiture</h3>
+              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                High-fashion studio and outdoor portraiture crafted for personal legacies and executive branding.
+              </p>
+              <ul class="space-y-2 text-xs text-neutral-700 dark:text-neutral-300 border-t border-neutral-200/60 dark:border-neutral-800 pt-4 mb-6">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Master Retouching & Grading</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Private Stylist & Hair Lead</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle2" class="w-3.5 h-3.5 text-amber-500"></i> Museum Fine-Art Acrylic Prints</li>
+              </ul>
+            </div>
+            <a href="booking.html" class="w-full text-center py-2.5 px-4 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded hover:opacity-90 transition-opacity">
+              Inquire Coverage
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE LUXURY INVESTMENT ESTIMATOR (Home 2 Exclusive) -->
+    <section class="py-24 bg-brand-ivory/40 dark:bg-neutral-900/70 border-y border-neutral-200/60 dark:border-neutral-800/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs uppercase tracking-[0.2em] font-mono text-amber-600 dark:text-amber-400 font-semibold">Instant VIP Estimator</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">
+            Estimate Your Luxury Package
+          </h2>
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-3 font-light">
+            Select your event type and desired options to view an instant investment estimate.
+          </p>
+        </div>
+
+        <!-- Estimator Card Container -->
+        <div class="bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-3xl p-6 sm:p-10 shadow-xl">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Controls -->
+            <div class="space-y-6">
+              
+              <!-- Select Event Type -->
+              <div>
+                <label for="est-event-type" class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                  Event Category
+                </label>
+                <select id="est-event-type" class="w-full p-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 text-sm text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-amber-500 outline-none">
+                  <option value="wedding">Luxury Wedding Cinema & Photo ($4,500 base)</option>
+                  <option value="gala">High-Society Gala / Corporate ($3,200 base)</option>
+                  <option value="destination">Destination Estate Elopement ($5,800 base)</option>
+                  <option value="portrait">Couture Portraiture Session ($1,800 base)</option>
+                </select>
+              </div>
+
+              <!-- Coverage Hours Range Slider -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <label for="est-hours" class="text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300">
+                    Coverage Duration
+                  </label>
+                  <span id="est-hours-val" class="font-mono text-sm font-bold text-amber-600 dark:text-amber-400">8 Hours</span>
+                </div>
+                <input type="range" id="est-hours" min="4" max="16" step="2" value="8" class="w-full accent-amber-500 cursor-pointer">
+              </div>
+
+              <!-- Add-ons Checkboxes -->
+              <div class="space-y-3 pt-2">
+                <span class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 dark:text-neutral-300">
+                  Premium Bespoke Enhancements
+                </span>
+
+                <label class="flex items-center justify-between p-3 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 cursor-pointer text-xs">
+                  <span class="flex items-center gap-2">
+                    <input type="checkbox" id="addon-drone" class="est-addon rounded text-amber-600 focus:ring-amber-500" value="750">
+                    <span>8K Aerial FPV Drone Cinema</span>
+                  </span>
+                  <span class="font-mono font-semibold text-neutral-500">+$750</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 cursor-pointer text-xs">
+                  <span class="flex items-center gap-2">
+                    <input type="checkbox" id="addon-sameday" class="est-addon rounded text-amber-600 focus:ring-amber-500" value="950">
+                    <span>Same-Day Teaser Film Reel</span>
+                  </span>
+                  <span class="font-mono font-semibold text-neutral-500">+$950</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 cursor-pointer text-xs">
+                  <span class="flex items-center gap-2">
+                    <input type="checkbox" id="addon-album" class="est-addon rounded text-amber-600 focus:ring-amber-500" value="1200">
+                    <span>Italian Leather Fine Art Album</span>
+                  </span>
+                  <span class="font-mono font-semibold text-neutral-500">+$1,200</span>
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Right Results Box -->
+            <div class="bg-brand-charcoal text-brand-ivory rounded-2xl p-8 flex flex-col justify-between border border-amber-500/30 glow-gold-subtle">
+              <div>
+                <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                  <span class="text-xs uppercase tracking-widest font-mono text-amber-300">Investment Estimate</span>
+                  <span class="px-2 py-0.5 text-[10px] bg-amber-500/20 text-amber-300 border border-amber-400/30 rounded uppercase font-mono">Bespoke</span>
+                </div>
+
+                <div class="mb-6">
+                  <div class="text-xs text-neutral-400 uppercase tracking-widest font-mono">Estimated Range</div>
+                  <div id="est-total-display" class="font-serif text-4xl sm:text-5xl font-bold text-amber-300 mt-2">
+                    $5,250 - $6,000
+                  </div>
+                  <p class="text-xs text-neutral-300 mt-3 leading-relaxed">
+                    Includes full digital licensing, color-graded raw archive access, and cloud storage backup.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <a href="booking.html" id="est-inquire-link" class="touch-card block w-full text-center py-4 bg-brand-accent text-white font-semibold text-xs uppercase tracking-[0.2em] rounded shadow-lg hover:bg-amber-600 transition-colors">
+                  Reserve Date With This Estimate
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE BESPOKE CLIENT JOURNEY TIMELINE -->
+    <section class="py-24 bg-white dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] font-mono text-amber-600 dark:text-amber-400 font-semibold">Excellence in Execution</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">
+            The VIP Studio Experience
+          </h2>
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-3 font-light">
+            From initial creative alignment to final master delivery, every milestone is handled with utmost discretion.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="touch-card bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 relative">
+            <span class="w-8 h-8 rounded-full bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center font-mono text-xs font-bold mb-4">
+              01
+            </span>
+            <h3 class="font-serif text-lg font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Private Consultation</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              In-person or virtual alignment on moodboards, lighting requirements, security protocols, and timeline flow.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="touch-card bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 relative">
+            <span class="w-8 h-8 rounded-full bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center font-mono text-xs font-bold mb-4">
+              02
+            </span>
+            <h3 class="font-serif text-lg font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Creative Storyboarding</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Custom shot list composition, crew assignment, and technical scout of venue architecture and natural light windows.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="touch-card bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 relative">
+            <span class="w-8 h-8 rounded-full bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center font-mono text-xs font-bold mb-4">
+              03
+            </span>
+            <h3 class="font-serif text-lg font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Master Production</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Seamless, non-intrusive multi-angle cinema capture and high-resolution photojournalism during your celebration.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="touch-card bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 relative">
+            <span class="w-8 h-8 rounded-full bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center font-mono text-xs font-bold mb-4">
+              04
+            </span>
+            <h3 class="font-serif text-lg font-semibold text-brand-charcoal dark:text-brand-ivory mb-2">Handcrafted Delivery</h3>
+            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Receive your 4K master films, private encrypted web gallery, and custom-bound Italian leather fine art albums.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CLIENT REVIEWS & WALL OF PRAISE -->
+    <section class="py-24 bg-brand-ivory/30 dark:bg-neutral-900/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <span class="text-xs uppercase tracking-[0.2em] font-mono text-amber-600 dark:text-amber-400 font-semibold">Client Testimonials</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Endorsed by Discerning Couples</h2>
+          </div>
+          <div class="flex items-center gap-1 text-amber-500 mt-4 md:mt-0">
+            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-amber-500"></i>
+            <span class="text-xs font-mono text-neutral-700 dark:text-neutral-300 ml-2">(5.0 Rating across 120+ reviews)</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="touch-card bg-white dark:bg-neutral-950 p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between shadow-sm">
+            <p class="font-serif italic text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+              "Frame & Fable captured our Lake Como ceremony with breathtaking elegance. The cinema film brought us and our families to tears. Absolute masterclass craftsmanship."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-900 flex items-center justify-center font-bold text-sm">
+                EV
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-brand-charcoal dark:text-brand-ivory">Elena & Victor Vance</h4>
+                <p class="text-[11px] text-neutral-500 font-mono">Villa d'Este, Lake Como</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="touch-card bg-white dark:bg-neutral-950 p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between shadow-sm">
+            <p class="font-serif italic text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+              "As corporate event directors, we need absolute discretion and rapid turnaround. Frame & Fable delivered same-day media assets that blew our executive board away."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold text-sm">
+                MR
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-brand-charcoal dark:text-brand-ivory">Marcus Sterling</h4>
+                <p class="text-[11px] text-neutral-500 font-mono">Global Innovation Summit, NYC</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="touch-card bg-white dark:bg-neutral-950 p-8 rounded-2xl border border-neutral-200/80 dark:border-neutral-800 flex flex-col justify-between shadow-sm">
+            <p class="font-serif italic text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+              "Their team worked seamlessly alongside our wedding planners. The heirloom fine art album is now our prized family keepsake."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
+              <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-sm">
+                SC
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-brand-charcoal dark:text-brand-ivory">Sophia & Christopher</h4>
+                <p class="text-[11px] text-neutral-500 font-mono">Château de Chantilly, France</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SHOWREEL CINEMA LIGHTBOX MODAL -->
+  <div id="showreel-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-8">
+    <div class="relative w-full max-w-4xl bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-neutral-800 bg-neutral-900">
+        <span class="text-xs uppercase font-mono tracking-widest text-amber-400">Frame & Fable Cinema Showreel</span>
+        <button type="button" id="close-showreel-btn" class="p-1.5 text-neutral-400 hover:text-white rounded-lg transition-colors" aria-label="Close video player">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="aspect-cinematic bg-black flex items-center justify-center relative overflow-hidden">
+        <!-- Mock Video Player Preview -->
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80" alt="Showreel Video Preview" class="w-full h-full object-cover opacity-60">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+          <div class="w-16 h-16 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-2xl animate-pulse mb-4 cursor-pointer">
+            <i data-lucide="play" class="w-8 h-8 fill-white ml-1"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-white font-semibold">2026 Master Cinema Reel</h3>
+          <p class="text-xs text-neutral-300 mt-1 font-sans">4K HDR • Ultra-Discreet Multi-Camera Production</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CONCIERGE QUICK ACTION BUTTON (Mobile touch support) -->
+  <div class="fixed bottom-6 right-6 z-30 lg:hidden">
+    <a href="booking.html" class="touch-card flex items-center gap-2 px-4 py-3 bg-brand-accent text-white rounded-full shadow-2xl text-xs font-semibold uppercase tracking-wider">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span>Check VIP Dates</span>
+    </a>
+  </div>
+
+  <!-- SITE FOOTER CONTAINER -->
+  <footer id="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/footer.js"></script>
+  
+  <script>
+    // Home 2 Specific Interactive Controls
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Showreel Lightbox Modal
+      const showreelModal = document.getElementById('showreel-modal');
+      const openBtn = document.getElementById('open-showreel-btn');
+      const closeBtn = document.getElementById('close-showreel-btn');
+
+      if (openBtn && showreelModal) {
+        openBtn.addEventListener('click', () => {
+          showreelModal.classList.remove('hidden');
+        });
+      }
+
+      if (closeBtn && showreelModal) {
+        closeBtn.addEventListener('click', () => {
+          showreelModal.classList.add('hidden');
+        });
+      }
+
+      if (showreelModal) {
+        showreelModal.addEventListener('click', (e) => {
+          if (e.target === showreelModal) {
+            showreelModal.classList.add('hidden');
+          }
+        });
+      }
+
+      // 2. Investment Estimator Calculation
+      const eventSelect = document.getElementById('est-event-type');
+      const hoursRange = document.getElementById('est-hours');
+      const hoursVal = document.getElementById('est-hours-val');
+      const totalDisplay = document.getElementById('est-total-display');
+      const addons = document.querySelectorAll('.est-addon');
+
+      function calculateEstimate() {
+        if (!eventSelect || !hoursRange || !totalDisplay) return;
+
+        let basePrice = 4500;
+        const selected = eventSelect.value;
+        if (selected === 'wedding') basePrice = 4500;
+        if (selected === 'gala') basePrice = 3200;
+        if (selected === 'destination') basePrice = 5800;
+        if (selected === 'portrait') basePrice = 1800;
+
+        const hours = parseInt(hoursRange.value, 10);
+        if (hoursVal) hoursVal.textContent = hours + ' Hours';
+
+        // Additional hours over 6 hours at $250/hr
+        let hoursExtra = 0;
+        if (hours > 6) {
+          hoursExtra = (hours - 6) * 250;
+        }
+
+        let addonTotal = 0;
+        addons.forEach(chk => {
+          if (chk.checked) {
+            addonTotal += parseInt(chk.value, 10);
+          }
+        });
+
+        const totalMin = basePrice + hoursExtra + addonTotal;
+        const totalMax = Math.round(totalMin * 1.15);
+
+        totalDisplay.textContent = `$${totalMin.toLocaleString()} - $${totalMax.toLocaleString()}`;
+      }
+
+      if (eventSelect) eventSelect.addEventListener('change', calculateEstimate);
+      if (hoursRange) hoursRange.addEventListener('input', calculateEstimate);
+      addons.forEach(chk => chk.addEventListener('change', calculateEstimate));
+
+      calculateEstimate();
+    });
+  </script>
+
+</body>
+</html>
