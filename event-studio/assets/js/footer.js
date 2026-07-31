@@ -74,6 +74,8 @@ const FooterComponent = {
               <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
               <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
               <li><a href="booking.html" class="hover:text-amber-400 transition-colors">Check Availability</a></li>
+              <li><a href="404.html" class="hover:text-amber-400 transition-colors">Press & Media Kit</a></li>
+              <li><a href="coming-soon.html" class="hover:text-amber-400 transition-colors">Virtual Studio Tour</a></li>
             </ul>
           </div>
 
@@ -87,8 +89,8 @@ const FooterComponent = {
               <li><a href="services.html#birthday-events" class="hover:text-white transition-colors">Birthday Photography</a></li>
               <li><a href="services.html#event-videography" class="hover:text-white transition-colors">Event Videography</a></li>
               <li><a href="services.html#cinematic-films" class="hover:text-white transition-colors">Cinematic Films</a></li>
-              <li><a href="services.html#pre-wedding" class="hover:text-white transition-colors">Pre-Wedding Photography</a></li>
-              <li><a href="services.html#private-events" class="hover:text-white transition-colors">Private Events</a></li>
+              <li><a href="coming-soon.html" class="hover:text-white transition-colors">Drone Aerial Videography</a></li>
+              <li><a href="404.html" class="hover:text-white transition-colors">Live Event Streaming</a></li>
             </ul>
           </div>
 
@@ -124,7 +126,8 @@ const FooterComponent = {
             <span class="hidden sm:inline text-neutral-700">•</span>
             <p class="text-neutral-400 font-medium">Developed by Abhivorn Technologies Pvt. Ltd.</p>
           </div>
-          <div class="flex space-x-6 rtl:space-x-reverse">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 justify-center">
+            <a href="404.html" class="hover:text-neutral-300 transition-colors">Client Portal</a>
             <a href="coming-soon.html" class="hover:text-neutral-300 transition-colors">Privacy Policy</a>
             <a href="coming-soon.html" class="hover:text-neutral-300 transition-colors">Terms & Conditions</a>
             <a href="sitemap.xml" class="hover:text-neutral-300 transition-colors">Sitemap</a>

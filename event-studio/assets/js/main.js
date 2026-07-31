@@ -23,12 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2.1 Active Navigation Link Highlighting
   function hydrateActiveNavLinks() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const currentHash = window.location.hash || '';
     const navLinks = document.querySelectorAll('.site-header nav a, #mobile-menu-drawer nav a');
+    
+    // Check if any anchor link specifically matches the current path and hash
+    const hasHashMatch = Array.from(navLinks).some(link => {
+      const rawHref = link.getAttribute('href') || '';
+      const [linkPath, linkHash] = rawHref.split('#');
+      return linkHash && linkPath === currentPath && currentHash === '#' + linkHash;
+    });
+
     navLinks.forEach(link => {
-      const linkPath = link.getAttribute('href')?.split('#')[0] || '';
-      const isMatch = (linkPath === currentPath) || (currentPath === '' && linkPath === 'index.html');
+      const rawHref = link.getAttribute('href') || '';
+      const [linkPath, linkHash] = rawHref.split('#');
 
       link.classList.remove('nav-link-active', 'border-b-2', 'border-brand-charcoal', 'dark:border-brand-ivory', 'pb-0.5', 'text-brand-charcoal', 'dark:text-brand-ivory', 'bg-neutral-100', 'dark:bg-neutral-800');
+
+      let isMatch = false;
+      if (linkHash) {
+        // Anchor link (e.g., services.html#packages): only highlight if exact hash matches
+        isMatch = (linkPath === currentPath) && (currentHash === '#' + linkHash);
+      } else {
+        // Main page link (e.g., services.html): highlight only if no specific hash link matched
+        isMatch = (linkPath === currentPath && !hasHashMatch) || ((currentPath === '' || currentPath === 'index.html') && linkPath === 'index.html' && !hasHashMatch);
+      }
+
       if (isMatch) {
         link.classList.add('nav-link-active');
         if (link.classList.contains('dropdown-item')) {
@@ -37,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (parentBtn) {
             parentBtn.classList.add('text-brand-charcoal', 'dark:text-brand-ivory', 'font-semibold');
           }
+        } else {
+          link.classList.add('border-b-2', 'border-brand-charcoal', 'dark:border-brand-ivory', 'pb-0.5', 'text-brand-charcoal', 'dark:text-brand-ivory');
         }
       }
     });
@@ -161,6 +182,129 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close mobile menu when clicking nav links
   document.querySelectorAll('#mobile-menu-drawer a:not(#mobile-home-dropdown-toggle)').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
+  });
+  // 4. Showreel Cinema Lightbox Modal Controls
+  const openShowreelBtn = document.getElementById('open-showreel-btn');
+  const closeShowreelBtn = document.getElementById('close-showreel-btn');
+  const showreelModal = document.getElementById('showreel-modal');
+
+  if (openShowreelBtn && showreelModal) {
+    openShowreelBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showreelModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (typeof showToast === 'function') {
+        showToast('Loading Cinema Showreel Video...', 'info');
+      }
+    });
+  }
+
+  if (closeShowreelBtn && showreelModal) {
+    closeShowreelBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showreelModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (showreelModal) {
+    showreelModal.addEventListener('click', (e) => {
+      if (e.target === showreelModal) {
+        showreelModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // 5. Portfolio Filtering Logic
+  const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+  const filterItems = document.querySelectorAll('.portfolio-item, [data-category]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const filterValue = btn.getAttribute('data-filter') || 'all';
+
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-brand-charcoal', 'text-white', 'dark:bg-brand-ivory', 'dark:text-brand-charcoal');
+        b.classList.add('bg-neutral-100', 'text-neutral-600', 'dark:bg-neutral-800', 'dark:text-neutral-300');
+        b.setAttribute('aria-selected', 'false');
+      });
+
+      btn.classList.remove('bg-neutral-100', 'text-neutral-600', 'dark:bg-neutral-800', 'dark:text-neutral-300');
+      btn.classList.add('bg-brand-charcoal', 'text-white', 'dark:bg-brand-ivory', 'dark:text-brand-charcoal');
+      btn.setAttribute('aria-selected', 'true');
+
+      filterItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category') || '';
+        if (filterValue === 'all' || itemCategory.toLowerCase().includes(filterValue.toLowerCase())) {
+          item.style.display = '';
+          item.classList.remove('hidden');
+        } else {
+          item.style.display = 'none';
+          item.classList.add('hidden');
+        }
+      });
+
+      if (typeof showToast === 'function') {
+        showToast(`Filtered projects by: ${btn.textContent.trim()}`, 'info');
+      }
+    });
+  });
+
+  // 6. Interactive Form Handling (Newsletter, Contact, Inquiry, Notify)
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerHTML : '';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin inline-block mr-2"></i> Submitting...`;
+        if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+      }
+
+      setTimeout(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+        }
+        form.reset();
+        if (typeof showToast === 'function') {
+          showToast('Thank you! Your request has been submitted successfully.', 'success');
+        }
+      }, 1200);
+    });
+  });
+
+  // 7. Universal Fallback Button Delegate (Ensures every button across the site has active functionality)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+
+    // Skip handled toggle & navigation buttons
+    if (
+      btn.classList.contains('theme-toggle-btn') ||
+      btn.classList.contains('rtl-toggle-btn') ||
+      btn.classList.contains('nav-dropdown-btn') ||
+      btn.classList.contains('portfolio-filter-btn') ||
+      btn.id === 'mobile-menu-btn' ||
+      btn.id === 'mobile-menu-close' ||
+      btn.id === 'mobile-home-dropdown-toggle' ||
+      btn.id === 'open-showreel-btn' ||
+      btn.id === 'close-showreel-btn' ||
+      btn.getAttribute('type') === 'submit'
+    ) {
+      return;
+    }
+
+    // Interactive feedback for general utility/action buttons
+    const btnLabel = btn.textContent.trim() || btn.getAttribute('aria-label') || btn.getAttribute('title') || 'Button';
+    if (typeof showToast === 'function') {
+      showToast(`Clicked: ${btnLabel}`, 'info');
+    }
   });
 });
 
