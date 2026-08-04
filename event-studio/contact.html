@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Frame & Fable Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>Contact | Frame & Fable Studio</title>
   <meta name="description" content="Get in touch with Frame & Fable Studio. Studio address, phone, email, and interactive inquiry form.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,7 @@
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
@@ -55,13 +57,13 @@
       <div class="flex items-center justify-between min-h-[72px] py-3">
         
         <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
-          <div class="w-10 h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xl group-hover:scale-105 transition-transform shadow-sm">
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-1">
+          <div class="w-7 h-7 sm:w-10 sm:h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-xl group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
             F
           </div>
           <div class="flex flex-col">
-            <span class="font-serif text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory">Frame & Fable</span>
-            <span class="text-[10px] tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+            <span class="font-serif text-sm sm:text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight sm:leading-normal">Frame & Fable</span>
+            <span class="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
           </div>
         </a>
 
@@ -113,12 +115,12 @@
           <!-- Controls: Dark Mode & RTL -->
           <div class="flex items-center gap-2">
             <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
-              <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
-              <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+              <svg class="theme-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              <svg class="theme-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             </button>
             
             <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
-              <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
             </button>
           </div>
 
@@ -131,14 +133,14 @@
         <!-- Mobile Controls & Hamburger -->
         <div class="flex items-center gap-2 lg:hidden">
           <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle theme" title="Toggle theme">
-            <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
-            <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+            <svg class="theme-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="theme-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
           </button>
           <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
-            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
           </button>
           <button type="button" id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 rounded-lg transition-colors" aria-expanded="false" aria-label="Open Navigation">
-            <i data-lucide="menu" class="w-5 h-5"></i>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
           </button>
         </div>
 
@@ -162,7 +164,7 @@
         <div>
           <button type="button" id="mobile-home-dropdown-toggle" class="w-full flex items-center justify-between text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-amber-600 py-1 focus:outline-none">
             <span class="flex items-center gap-2">
-              <i data-lucide="layout-template" class="w-4 h-4 text-neutral-500"></i> Home Options
+              <i data-lucide="layout-template" class="w-4 h-4 text-neutral-500"></i> Home
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 mobile-dropdown-icon transition-transform"></i>
           </button>
@@ -176,20 +178,11 @@
           </div>
         </div>
 
-        <a href="about.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">About Studio</a>
+        <a href="about.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">About</a>
         <a href="services.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Services</a>
         <a href="services.html#packages" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
         <a href="portfolio.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Portfolio</a>
-        <a href="contact.html" class="text-base font-medium text-amber-600 dark:text-amber-400">Contact Us</a>
-        <a href="404.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-amber-600 flex items-center gap-2">
-          <i data-lucide="newspaper" class="w-4 h-4 text-amber-500"></i> Press & Media Kit
-        </a>
-        <a href="coming-soon.html" class="text-base font-medium text-neutral-600 dark:text-neutral-400 hover:text-amber-600 flex items-center gap-2">
-          <i data-lucide="camera" class="w-4 h-4 text-amber-500"></i> Virtual Studio Tour
-        </a>
-        <a href="dashboard.html" class="text-base font-medium text-indigo-600 dark:text-indigo-400 flex items-center gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
-          <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Admin Dashboard
-        </a>
+        <a href="contact.html" class="text-base font-medium text-amber-600 dark:text-amber-400">Contact</a>
       </nav>
 
     </div>
@@ -210,7 +203,7 @@
               <ul class="space-y-6 text-sm text-neutral-600 dark:text-neutral-300">
                 <li class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
-                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                   </div>
                   <div>
                     <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Headquarters</strong>
@@ -220,7 +213,7 @@
 
                 <li class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
-                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                   </div>
                   <div>
                     <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Direct Email</strong>
@@ -230,7 +223,7 @@
 
                 <li class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
-                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                   </div>
                   <div>
                     <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Phone & WhatsApp</strong>
@@ -240,7 +233,7 @@
 
                 <li class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-full bg-brand-ivory dark:bg-neutral-800 flex items-center justify-center flex-shrink-0 text-brand-charcoal dark:text-brand-ivory">
-                    <i data-lucide="clock" class="w-5 h-5"></i>
+                    <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   </div>
                   <div>
                     <strong class="block text-brand-charcoal dark:text-brand-ivory font-medium">Studio Hours</strong>
@@ -257,8 +250,8 @@
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="Instagram">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="Vimeo / Cinema">
-                  <i data-lucide="video" class="w-5 h-5"></i>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="YouTube / Studio Cinema">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center text-neutral-700 dark:text-neutral-300 hover:bg-brand-charcoal hover:text-white dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal transition-colors" aria-label="LinkedIn">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.239-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -269,16 +262,46 @@
               </div>
             </div>
 
-            <!-- Google Maps Placeholder Container -->
-            <div class="mt-8 rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 p-6 text-center">
-              <!-- GOOGLE MAPS API INTEGRATION PLACEHOLDER
-                   To enable live map:
-                   <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=New+York" class="w-full h-48 border-0"></iframe>
-              -->
-              <div class="flex flex-col items-center justify-center h-44 text-neutral-400 space-y-2">
-                <i data-lucide="map" class="w-8 h-8 text-amber-600"></i>
-                <span class="text-xs font-mono">Interactive Studio Map Placeholder</span>
-                <span class="text-[10px]">450 Creative Avenue, New York, NY</span>
+            <!-- Interactive Studio Map Container -->
+            <div class="mt-8 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm">
+              <!-- Map Header & Status -->
+              <div class="px-4 py-3 bg-neutral-50 dark:bg-neutral-800/60 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i>
+                  <span class="text-xs font-semibold text-neutral-800 dark:text-neutral-200">Capture Studio HQ</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1 animate-pulse"></span> Open for Appointments
+                  </span>
+                </div>
+              </div>
+
+              <!-- Live Interactive Map Viewport -->
+              <div class="relative w-full h-56 bg-neutral-100 dark:bg-neutral-800">
+                <div id="contact-studio-map" class="w-full h-full z-0"></div>
+              </div>
+
+              <!-- Map Actions & Address Toolbar -->
+              <div class="p-4 bg-neutral-50/50 dark:bg-neutral-900/50 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
+                <div class="flex items-start justify-between text-xs">
+                  <div>
+                    <h4 class="font-semibold text-neutral-900 dark:text-neutral-100">450 Creative Avenue</h4>
+                    <p class="text-neutral-500 dark:text-neutral-400 text-[11px]">Studio Suite 800, New York, NY 10001</p>
+                  </div>
+                  <span class="text-[10px] text-amber-600 dark:text-amber-400 font-mono bg-amber-50 dark:bg-amber-950/50 px-2 py-1 rounded">Manhattan</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                  <a href="https://maps.google.com/?q=450+Creative+Avenue+New+York+NY" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold bg-brand-charcoal text-white dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 rounded transition-all">
+                    <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+                    <span>Get Directions</span>
+                  </a>
+                  <button type="button" onclick="copyStudioAddress()" class="flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded transition-colors">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    <span>Copy Address</span>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -329,11 +352,69 @@
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/footer.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
-    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showToast('Message sent successfully! We will get back to you within 24 hours.', 'success');
-      e.target.reset();
+    function copyStudioAddress() {
+      const address = "450 Creative Avenue, Studio Suite 800, New York, NY 10001";
+      navigator.clipboard.writeText(address).then(() => {
+        if (typeof showToast === 'function') {
+          showToast('Studio address copied to clipboard!', 'success');
+        } else {
+          alert('Studio address copied to clipboard!');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Contact Form Submit Handler
+      document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Message sent successfully! We will get back to you within 24 hours.', 'success');
+        e.target.reset();
+      });
+
+      // Interactive Studio Map Initializer
+      const mapContainer = document.getElementById('contact-studio-map');
+      if (mapContainer && typeof L !== 'undefined') {
+        const studioCoords = [40.7510, -73.9870]; // Manhattan Midtown New York
+        const map = L.map('contact-studio-map', {
+          center: studioCoords,
+          zoom: 15,
+          zoomControl: true,
+          scrollWheelZoom: false
+        });
+
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        const tileUrl = isDarkMode 
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png' 
+          : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+
+        L.tileLayer(tileUrl, {
+          maxZoom: 19,
+          attribution: '&copy; CARTO &copy; OpenStreetMap'
+        }).addTo(map);
+
+        const customIcon = L.divIcon({
+          className: 'custom-map-pin',
+          html: `<div style="background-color: #102A43; color: #D69D30; border: 2px solid #D69D30; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                 </div>`,
+          iconSize: [36, 36],
+          iconAnchor: [18, 18],
+          popupAnchor: [0, -18]
+        });
+
+        const marker = L.marker(studioCoords, { icon: customIcon }).addTo(map);
+        marker.bindPopup(`
+          <div style="font-family: Inter, sans-serif; font-size: 12px; padding: 4px; color: #102A43;">
+            <strong style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 2px;">Capture Studio HQ</strong>
+            <span style="color: #475569;">450 Creative Avenue, Suite 800<br>New York, NY 10001</span><br>
+            <a href="https://maps.google.com/?q=450+Creative+Avenue+New+York+NY" target="_blank" style="color: #d97706; font-weight: 600; text-decoration: underline; display: inline-block; margin-top: 6px;">Open in Google Maps &rarr;</a>
+          </div>
+        `).openPopup();
+      } else if (mapContainer) {
+        mapContainer.innerHTML = '<iframe src="https://maps.google.com/maps?q=450+Creative+Avenue+New+York+NY&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0"></iframe>';
+      }
     });
   </script>
 </body>

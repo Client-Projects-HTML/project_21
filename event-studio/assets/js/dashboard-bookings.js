@@ -113,22 +113,22 @@ const DashboardBookings = {
 
     tbody.innerHTML = filtered.map(b => `
       <tr class="border-b border-neutral-100 dark:border-neutral-800 hover:bg-neutral-50/50 dark:hover:bg-neutral-800/40 transition-colors">
-        <td class="px-6 py-4">
+        <td class="px-6 py-4" data-label="Client">
           <div class="font-medium text-neutral-900 dark:text-neutral-100">${b.client}</div>
           <div class="text-xs text-neutral-400">${b.email}</div>
         </td>
-        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300">${b.event}</td>
-        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300 font-mono">${b.date}</td>
-        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300">${b.package}</td>
-        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300">${b.location}</td>
-        <td class="px-6 py-4">
+        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300" data-label="Event">${b.event}</td>
+        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300 font-mono" data-label="Date">${b.date}</td>
+        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300" data-label="Package">${b.package}</td>
+        <td class="px-6 py-4 text-sm text-neutral-700 dark:text-neutral-300" data-label="Location">${b.location}</td>
+        <td class="px-6 py-4" data-label="Status">
           ${this.getStatusBadge(b.status)}
         </td>
-        <td class="px-6 py-4 text-right space-x-2 space-x-reverse">
-          <button type="button" onclick="DashboardBookings.viewDetails('${b.id}')" class="p-1.5 text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white" aria-label="View booking details">
+        <td class="px-6 py-4 text-right space-x-2 space-x-reverse" data-label="Actions">
+          <button type="button" onclick="DashboardBookings.viewDetails('${b.id}')" class="p-2 min-touch-target text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white" aria-label="View booking details">
             <i data-lucide="eye" class="w-4 h-4"></i>
           </button>
-          <button type="button" onclick="DashboardBookings.deleteBooking('${b.id}')" class="p-1.5 text-rose-500 hover:text-rose-700" aria-label="Delete booking">
+          <button type="button" onclick="DashboardBookings.deleteBooking('${b.id}')" class="p-2 min-touch-target text-rose-500 hover:text-rose-700" aria-label="Delete booking">
             <i data-lucide="trash-2" class="w-4 h-4"></i>
           </button>
         </td>

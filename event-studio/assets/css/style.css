@@ -1,7 +1,32 @@
 /* ==========================================================================
    FRAME & FABLE - EVENT PHOTOGRAPHY & VIDEOGRAPHY STUDIO
-   Core CSS Design System & Custom Utilities
+   Core CSS Design System, Responsive Breakpoints & Custom Utilities
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. RESPONSIVE BREAKPOINTS DESIGN SYSTEM
+   Mobile:     < 640px       (max-width: 639.98px)
+   Tablet:     640px - 1024px (min-width: 640px and max-width: 1023.98px)
+   Desktop:    1024px - 1280px (min-width: 1024px and max-width: 1279.98px)
+   Large:      > 1280px      (min-width: 1280px)
+   -------------------------------------------------------------------------- */
+
+/* Breakpoint Visibility Utilities */
+@media (min-width: 640px) {
+  .show-mobile-only { display: none !important; }
+}
+
+@media (max-width: 639.98px), (min-width: 1024px) {
+  .show-tablet-only { display: none !important; }
+}
+
+@media (max-width: 1023.98px), (min-width: 1280px) {
+  .show-desktop-only { display: none !important; }
+}
+
+@media (max-width: 1279.98px) {
+  .show-large-only { display: none !important; }
+}
 
 /* Design Tokens & CSS Variables */
 :root {
@@ -101,7 +126,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
   aspect-ratio: 16 / 9;
 }
 
-/* Image Hover Effects */
+/* Image Hover Effects & Responsive Image Data Optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .img-zoom-container {
   overflow: hidden;
 }
@@ -184,6 +214,143 @@ h1, h2, h3, h4, h5, h6, .font-display {
   transform: scale(0.985);
 }
 
+/* --------------------------------------------------------------------------
+   2. MOBILE-SPECIFIC REQUIREMENTS ENFORCEMENT (< 640px)
+   -------------------------------------------------------------------------- */
+
+/* Requirement B: Touch-Friendly Buttons (Minimum 44px x 44px) */
+@media (max-width: 639.98px) {
+  button, 
+  a.btn, 
+  .btn, 
+  input[type="submit"], 
+  input[type="button"], 
+  input[type="reset"], 
+  .touch-target,
+  #mobile-menu-btn,
+  #mobile-menu-close,
+  .theme-toggle-btn,
+  .rtl-toggle-btn,
+  .portfolio-filter-btn,
+  .nav-dropdown-btn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Ensure Mobile Drawer Nav Links reach 44px height target */
+  #mobile-menu-drawer nav a,
+  #mobile-menu-drawer button {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.min-touch-target {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  touch-action: manipulation;
+}
+
+/* Requirement C: Reduced Animations on Mobile */
+@media (max-width: 639.98px) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 150ms !important;
+  }
+  
+  .img-zoom-container:hover img,
+  .group:hover img {
+    transform: none !important;
+  }
+  
+  .animate-ambient-float,
+  .animate-pulse-subtle,
+  .animate-pulse,
+  .animate-bounce,
+  .animate-spin {
+    animation: none !important;
+  }
+}
+
+/* Requirement D: Simplified Tables & Data Display */
+.responsive-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 639.98px) {
+  .table-responsive-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive-mobile thead {
+    display: none;
+  }
+
+  .table-responsive-mobile tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .table-responsive-mobile tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .table-responsive-mobile td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 !important;
+    border-bottom: 1px dashed var(--border-light);
+    text-align: right !important;
+  }
+
+  .table-responsive-mobile td:last-child {
+    border-bottom: none;
+  }
+
+  .table-responsive-mobile td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: left;
+    padding-right: 1rem;
+  }
+}
+
+/* Requirement E: Optimized Image Sizes for Mobile Data */
+@media (max-width: 639.98px) {
+  .mobile-img-contain {
+    max-height: 320px;
+    object-fit: cover;
+  }
+  
+  /* Disable heavy backdrop blur & shadows on mobile GPUs for data/speed optimization */
+  .backdrop-blur-md, .backdrop-blur-lg, .backdrop-blur-xl {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
 /* Subtle Ambient Animations for Mobile Container Highlights */
 @keyframes ambient-float {
   0%, 100% { transform: translateY(0); }
@@ -213,7 +380,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   pointer-events: auto !important;
 }
 
-/* Reduced Motion */
+/* Reduced Motion Override for Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -222,4 +389,3 @@ h1, h2, h3, h4, h5, h6, .font-display {
     scroll-behavior: auto !important;
   }
 }
-
