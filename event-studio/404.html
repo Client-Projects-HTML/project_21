@@ -45,44 +45,68 @@
     })();
   </script>
 </head>
-<body class="bg-brand-charcoal text-brand-ivory min-h-screen flex flex-col justify-center items-center p-6 relative overflow-hidden">
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300 relative overflow-x-hidden">
 
-  <!-- Minimal Top Header Controls -->
-  <div class="absolute top-6 left-6 right-6 flex justify-between items-center z-10">
-    <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-      <div class="w-7 h-7 sm:w-10 sm:h-10 bg-brand-ivory text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-xl flex-shrink-0">F</div>
-      <span class="font-serif text-sm sm:text-xl tracking-wider font-semibold uppercase">Frame & Fable</span>
-    </a>
+  <!-- Main Compact Luxury Card Container -->
+  <main class="w-full max-w-lg bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-5 sm:p-7 shadow-2xl backdrop-blur-xl relative z-10 transition-all my-auto">
 
-    <div class="flex items-center gap-2">
-      <button type="button" class="theme-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle theme" title="Toggle theme">
-        <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
-        <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
-      </button>
-      <button type="button" class="rtl-toggle-btn w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors" aria-label="Toggle RTL" title="Toggle RTL">
-        <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- Centered 404 Hero Content -->
-  <main class="max-w-2xl mx-auto text-center space-y-6 z-10 py-12">
-    <span class="font-mono text-6xl sm:text-8xl font-extralight text-brand-accent tracking-widest block">404</span>
-    
-    <h1 class="font-serif text-4xl sm:text-5xl font-normal">Frame Not Found</h1>
-    
-    <p class="text-neutral-300 text-sm sm:text-base max-w-md mx-auto font-light leading-relaxed">
-      The moment you're looking for may have moved or no longer exists in our visual archive.
-    </p>
-
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-      <a href="index.html" class="w-full sm:w-auto px-8 py-3.5 bg-brand-ivory text-brand-charcoal hover:bg-white text-xs uppercase tracking-[0.2em] font-semibold rounded shadow-md transition-all">
-        Back Home
+    <!-- Card Header Bar: Logo on Left, Theme & RTL Controls on Right -->
+    <div class="flex items-center justify-between pb-3.5 mb-5 border-b border-neutral-200/80 dark:border-neutral-800/80 gap-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md">
+        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-base group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
+          F
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xs sm:text-sm tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight">Frame & Fable</span>
+          <span class="text-[7px] sm:text-[8px] tracking-[0.2em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+        </div>
       </a>
-      <a href="portfolio.html" class="w-full sm:w-auto px-8 py-3.5 border border-brand-ivory/40 text-brand-ivory hover:bg-white/10 text-xs uppercase tracking-[0.2em] font-semibold rounded transition-all">
-        View Portfolio
-      </a>
+
+      <!-- Right Controls: Theme Toggle + RTL Toggle -->
+      <div class="flex items-center gap-1.5">
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+          <i data-lucide="sun" class="theme-sun w-3.5 h-3.5 hidden"></i>
+          <i data-lucide="moon" class="theme-moon w-3.5 h-3.5"></i>
+        </button>
+        
+        <!-- RTL Toggle Button -->
+        <button type="button" class="rtl-toggle-btn w-8 h-8 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+          <i data-lucide="arrow-left-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
     </div>
+
+    <!-- Card Content -->
+    <div class="text-center space-y-4">
+      <span class="font-mono text-5xl sm:text-7xl font-extralight text-amber-600 dark:text-amber-400 tracking-widest block">404</span>
+      
+      <h1 class="font-serif text-2xl sm:text-3xl font-normal text-neutral-900 dark:text-white">Frame Not Found</h1>
+      
+      <p class="text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm max-w-sm mx-auto font-light leading-relaxed">
+        The moment you're looking for may have moved or no longer exists in our visual archive.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="index.html" class="w-full sm:w-auto px-6 py-2.5 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 text-[11px] uppercase tracking-[0.18em] font-semibold rounded-lg shadow-md transition-all flex items-center justify-center gap-1.5">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i>
+          <span>Back to Home</span>
+        </a>
+        <a href="portfolio.html" class="w-full sm:w-auto px-6 py-2.5 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-[11px] uppercase tracking-[0.18em] font-semibold rounded-lg transition-all">
+          View Portfolio
+        </a>
+      </div>
+    </div>
+
+    <!-- Developed By Footer Credit -->
+    <div class="pt-4 mt-5 border-t border-neutral-200/80 dark:border-neutral-800/80 text-[11px] text-neutral-500 dark:text-neutral-400 text-center">
+      <div class="flex items-center justify-center gap-1 font-medium">
+        <span>Developed by</span>
+        <span class="font-semibold text-neutral-800 dark:text-neutral-200">Abhivorn Technologies Pvt. Ltd.</span>
+      </div>
+    </div>
+
   </main>
 
   <script src="assets/js/theme.js"></script>
