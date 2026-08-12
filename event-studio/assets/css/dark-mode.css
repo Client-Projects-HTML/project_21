@@ -54,3 +54,18 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* Disable hover effects for Check Availability CTAs in dark theme */
+html.dark a[href="booking.html"]:hover,
+html.dark button[data-action="check-availability"]:hover,
+html.dark .btn-check-availability:hover {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html.dark a[href="booking.html"].dark\:bg-brand-ivory:hover,
+html.dark a[href="booking.html"].bg-brand-ivory:hover {
+  background-color: #F8ECD6 !important;
+  color: #102A43 !important;
+}
+

@@ -19,7 +19,7 @@ const FooterComponent = {
             Have an upcoming wedding, event, or celebration? Let's talk about your vision.
           </p>
           <div class="pt-4">
-            <a href="booking.html" class="inline-block px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-semibold bg-brand-charcoal text-brand-ivory rounded shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-amber-500 dark:bg-brand-ivory dark:text-brand-charcoal">
+            <a href="booking.html" class="inline-block px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-semibold bg-brand-charcoal text-brand-ivory rounded shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-amber-500 dark:bg-brand-ivory dark:text-brand-charcoal dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal dark:hover:opacity-100">
               Check Availability
             </a>
           </div>
