@@ -32,7 +32,7 @@ const FooterComponent = {
           
           <!-- Column 1: STUDIO BRAND -->
           <div class="space-y-4">
-            <a href="index.html" class="flex items-center gap-2 sm:gap-3 group inline-flex">
+            <a href="index.html" class="flex items-center gap-1.5 sm:gap-2.5 group inline-flex p-0">
               <div class="w-7 h-7 sm:w-10 sm:h-10 bg-brand-ivory text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-xl group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
                 F
               </div>

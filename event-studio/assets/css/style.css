@@ -74,6 +74,19 @@ h1, h2, h3, h4, h5, h6, .font-display {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
+/* Logo Padding Reduction & Compact Formatting */
+header a.group,
+.site-header a.group,
+#mobile-menu-drawer .font-serif,
+a[aria-label*="logo"],
+a[aria-label*="Logo"] {
+  padding: 0 !important;
+}
+
+.site-header a.group {
+  gap: 0.375rem !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -215,10 +228,162 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   2. MOBILE-SPECIFIC REQUIREMENTS ENFORCEMENT (< 640px)
+   2. MOBILE-SPECIFIC REQUIREMENTS ENFORCEMENT & RESPONSIVE TYPOGRAPHY
    -------------------------------------------------------------------------- */
 
-/* Requirement B: Touch-Friendly Buttons (Minimum 44px x 44px) */
+/* Requirement A: Responsive Typography Scaling across Mobile Screen Sizes (Large, Middle, Small) */
+
+/* 1. Large Mobile View (< 640px / 481px - 639.98px) */
+@media (max-width: 639.98px) {
+  html {
+    font-size: 93.75%; /* 15px base root */
+  }
+
+  /* Responsive Display & Heading Font Scaling */
+  h1, .text-6xl, .text-7xl, .text-8xl {
+    font-size: clamp(2.1rem, 7.5vw, 2.85rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  h2, .text-4xl, .text-5xl {
+    font-size: clamp(1.65rem, 5.5vw, 2.15rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h3, .text-3xl {
+    font-size: clamp(1.3rem, 4.2vw, 1.65rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h4, .text-2xl {
+    font-size: clamp(1.1rem, 3.2vw, 1.3rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-xl {
+    font-size: 1.05rem !important;
+  }
+
+  .text-lg {
+    font-size: 0.95rem !important;
+  }
+
+  p, .text-base {
+    line-height: 1.55;
+  }
+}
+
+/* 2. Middle Mobile View (381px - 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 87.5%; /* 14px base root */
+  }
+
+  /* Middle Mobile Typography Scaling */
+  h1, .text-6xl, .text-7xl, .text-8xl {
+    font-size: clamp(1.85rem, 7vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  h2, .text-4xl, .text-5xl {
+    font-size: clamp(1.45rem, 5vw, 1.85rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h3, .text-3xl {
+    font-size: clamp(1.2rem, 4vw, 1.45rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h4, .text-2xl {
+    font-size: clamp(1rem, 3vw, 1.15rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-xl {
+    font-size: 0.975rem !important;
+  }
+
+  .text-lg {
+    font-size: 0.9rem !important;
+  }
+
+  p, .text-base {
+    line-height: 1.5;
+  }
+
+  .text-sm {
+    font-size: 0.8125rem;
+  }
+
+  /* Compact tracking/letter-spacing for medium phone screens */
+  .tracking-widest, .tracking-\[0\.2em\], .tracking-\[0\.3em\], .tracking-\[0\.4em\] {
+    letter-spacing: 0.08em !important;
+  }
+}
+
+/* 3. Small Mobile View (<= 380px) */
+@media (max-width: 380px) {
+  html {
+    font-size: 81.25%; /* 13px base root */
+  }
+
+  /* Small Mobile Typography Scaling */
+  h1, .text-6xl, .text-7xl, .text-8xl {
+    font-size: clamp(1.6rem, 6.5vw, 1.95rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  h2, .text-4xl, .text-5xl {
+    font-size: clamp(1.3rem, 4.5vw, 1.55rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h3, .text-3xl {
+    font-size: clamp(1.1rem, 3.8vw, 1.3rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  h4, .text-2xl {
+    font-size: clamp(0.925rem, 2.8vw, 1.05rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  .text-xl {
+    font-size: 0.9rem !important;
+  }
+
+  .text-lg {
+    font-size: 0.835rem !important;
+  }
+
+  p, .text-base {
+    line-height: 1.45;
+  }
+
+  .text-sm {
+    font-size: 0.75rem;
+  }
+
+  .text-xs {
+    font-size: 0.6875rem;
+  }
+
+  /* Padding & tracking adjustments to ensure text never overflows tiny screens */
+  button, .btn, a.px-5, a.px-6, a.px-8 {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
+    font-size: 0.6875rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .px-4 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+/* Requirement B: Touch-Friendly General Buttons & Compact Header Toggles */
 @media (max-width: 639.98px) {
   button, 
   a.btn, 
@@ -227,10 +392,7 @@ img {
   input[type="button"], 
   input[type="reset"], 
   .touch-target,
-  #mobile-menu-btn,
   #mobile-menu-close,
-  .theme-toggle-btn,
-  .rtl-toggle-btn,
   .portfolio-filter-btn,
   .nav-dropdown-btn {
     min-height: 44px !important;
@@ -240,6 +402,28 @@ img {
     justify-content: center !important;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Compact Sleek Sizing for Header Logo, RTL, Theme & Hamburger Controls */
+  .site-header #mobile-menu-btn,
+  .site-header .theme-toggle-btn,
+  .site-header .rtl-toggle-btn,
+  #mobile-menu-btn,
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    min-height: 32px !important;
+    min-width: 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0.25rem !important;
+    border-radius: 0.375rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .site-header .flex.items-center.gap-2.lg\:hidden {
+    gap: 0.375rem !important;
   }
 
   /* Ensure Mobile Drawer Nav Links reach 44px height target */
