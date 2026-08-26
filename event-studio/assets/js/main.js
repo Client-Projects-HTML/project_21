@@ -275,13 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterValue = btn.getAttribute('data-filter') || 'all';
 
       filterBtns.forEach(b => {
-        b.classList.remove('bg-brand-charcoal', 'text-white', 'dark:bg-brand-ivory', 'dark:text-brand-charcoal');
+        b.classList.remove('bg-brand-charcoal', 'text-white', 'text-brand-ivory', 'dark:bg-brand-charcoal', 'dark:text-brand-ivory', 'dark:bg-brand-ivory', 'dark:text-brand-charcoal');
         b.classList.add('bg-neutral-100', 'text-neutral-600', 'dark:bg-neutral-800', 'dark:text-neutral-300');
         b.setAttribute('aria-selected', 'false');
       });
 
       btn.classList.remove('bg-neutral-100', 'text-neutral-600', 'dark:bg-neutral-800', 'dark:text-neutral-300');
-      btn.classList.add('bg-brand-charcoal', 'text-white', 'dark:bg-brand-ivory', 'dark:text-brand-charcoal');
+      btn.classList.add('bg-brand-charcoal', 'text-brand-ivory', 'dark:bg-brand-charcoal', 'dark:text-brand-ivory');
       btn.setAttribute('aria-selected', 'true');
 
       filterItems.forEach(item => {

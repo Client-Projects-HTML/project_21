@@ -10,16 +10,27 @@ const FooterComponent = {
 
     footerContainer.className = "bg-brand-ivory text-brand-charcoal border-t border-neutral-200 transition-colors duration-300 mt-auto dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-900";
     footerContainer.innerHTML = `
-      <!-- PRE-FOOTER CTA SECTION -->
-      <div class="border-b border-neutral-200 bg-brand-ivory/95 py-16 px-4 sm:px-6 lg:px-8 text-center dark:border-neutral-900 dark:bg-neutral-900/95">
-        <div class="max-w-4xl mx-auto space-y-4">
-          <span class="text-xs uppercase tracking-[0.25em] text-brand-accent font-mono">Start Your Experience</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-charcoal dark:text-brand-ivory">Let's Create Something Beautiful.</h2>
-          <p class="text-neutral-700 text-sm max-w-xl mx-auto font-light leading-relaxed dark:text-neutral-300">
+      <!-- PRE-FOOTER CTA SECTION WITH LUXURY BACKDROP IMAGE -->
+      <div class="relative overflow-hidden py-24 sm:py-28 px-4 sm:px-6 lg:px-8 text-center bg-brand-charcoal text-brand-ivory border-t border-b border-neutral-200/20 dark:border-neutral-900">
+        <!-- Background Image with Clean, Balanced Contrast Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=90" alt="Luxury celebration and event cinematography" class="w-full h-full object-cover object-center opacity-80 dark:opacity-65 scale-105 transition-transform duration-1000 brightness-105 contrast-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/55 dark:from-black/85 dark:via-black/50 dark:to-black/70"></div>
+          <div class="absolute inset-0 bg-radial from-transparent via-black/10 to-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto space-y-4">
+          <span class="inline-block text-xs uppercase tracking-[0.25em] text-amber-300 dark:text-brand-accent font-mono px-4 py-1.5 rounded-full border border-amber-400/40 dark:border-brand-accent/40 bg-black/60 dark:bg-black/70 backdrop-blur-md shadow-sm">
+            Start Your Experience
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white dark:text-brand-ivory drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+            Let's Create Something Beautiful.
+          </h2>
+          <p class="text-neutral-100 dark:text-neutral-200 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
             Have an upcoming wedding, event, or celebration? Let's talk about your vision.
           </p>
           <div class="pt-4">
-            <a href="booking.html" class="inline-block px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-semibold bg-brand-charcoal text-brand-ivory rounded shadow-xl transition-all focus:outline-none focus:ring-2 focus:ring-amber-500 dark:bg-brand-ivory dark:text-brand-charcoal dark:hover:bg-brand-ivory dark:hover:text-brand-charcoal dark:hover:opacity-100">
+            <a href="booking.html" class="inline-block px-9 py-4 text-xs uppercase tracking-[0.2em] font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-charcoal dark:text-brand-ivory hover:opacity-90 rounded shadow-2xl transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-neutral-600/60 dark:border-neutral-700/60">
               Check Availability
             </a>
           </div>
@@ -69,7 +80,7 @@ const FooterComponent = {
               <li><a href="index.html" class="transition-colors">Home</a></li>
               <li><a href="about.html" class="transition-colors">About</a></li>
               <li><a href="services.html" class="transition-colors">Services</a></li>
-              <li><a href="services.html#packages" class="font-semibold transition-colors">Experience Packages</a></li>
+              <li><a href="packages.html" class="font-semibold transition-colors">Experience Packages</a></li>
               <li><a href="portfolio.html" class="transition-colors">Portfolio</a></li>
               <li><a href="contact.html" class="transition-colors">Contact</a></li>
               <li><a href="booking.html" class="transition-colors">Check Availability</a></li>
@@ -117,13 +128,8 @@ const FooterComponent = {
         </div>
 
         <!-- FOOTER BOTTOM BAR -->
-        <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center text-xs text-neutral-500 gap-4">
-          <div class="text-center sm:text-left rtl:sm:text-right">
-            <p>&copy; 2026 Capture Studio. All rights reserved.</p>
-          </div>
-          <div class="text-center sm:text-right">
-            <p class="text-neutral-400 font-medium">Developed by Abhivorn Technologies Pvt. Ltd.</p>
-          </div>
+        <div class="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 text-center text-xs text-neutral-500">
+          <p>&copy; 2026 Capture Studio. All rights reserved.</p>
         </div>
       </div>
     `;

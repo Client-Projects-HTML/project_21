@@ -62,7 +62,7 @@
         
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-1.5 sm:gap-2.5 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md p-0">
-          <div class="w-7 h-7 sm:w-10 sm:h-10 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-xl group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
+          <div class="w-7 h-7 sm:w-10 sm:h-10 bg-brand-charcoal text-brand-ivory flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-xl group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
             F
           </div>
           <div class="flex flex-col">
@@ -109,7 +109,7 @@
 
           <a href="about.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">About</a>
           <a href="services.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Services</a>
-          <a href="services.html#packages" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
+          <a href="packages.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Packages</a>
           <a href="contact.html" class="text-sm font-medium text-neutral-600 dark:text-neutral-300 hover:text-brand-charcoal dark:hover:text-white transition-colors">Contact</a>
         </nav>
 
@@ -117,18 +117,18 @@
         <div class="hidden lg:flex items-center gap-4">
           <!-- Controls: Dark Mode & RTL -->
           <div class="flex items-center gap-2">
-            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
+            <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
               <svg class="theme-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
               <svg class="theme-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             </button>
             
-            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
+            <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
             </button>
           </div>
 
           <!-- Primary CTA -->
-          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 dark:hover:opacity-100 rounded shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500">
+          <a href="booking.html" class="px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-charcoal dark:text-brand-ivory hover:opacity-90 rounded shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500 border border-transparent dark:border-neutral-700/60">
             Check Availability
           </a>
         </div>
@@ -157,7 +157,7 @@
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-neutral-200 dark:border-neutral-800">
         <span class="font-serif text-lg font-bold tracking-wider text-brand-charcoal dark:text-brand-ivory">FRAME & FABLE</span>
-        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Navigation">
+        <button type="button" id="mobile-menu-close" class="p-2 text-neutral-500 hover:text-neutral-900 dark:hover:text-white" aria-label="Close Mobile Menu">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
@@ -165,14 +165,14 @@
       <nav class="mt-6 flex flex-col space-y-4" aria-label="Mobile Navigation">
         <!-- Mobile Dropdown Accordion for Home -->
         <div>
-          <button type="button" id="mobile-home-dropdown-toggle" class="w-full flex items-center justify-between text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-amber-600 py-1 focus:outline-none">
+          <button type="button" id="mobile-home-dropdown-toggle" class="w-full flex items-center justify-between text-base font-semibold text-neutral-800 dark:text-neutral-100 py-1 focus:outline-none">
             <span class="flex items-center gap-2">
-              <i data-lucide="layout-template" class="w-4 h-4 text-neutral-500"></i> Home
+              <i data-lucide="layout-template" class="w-4 h-4 text-amber-600"></i> Home
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 mobile-dropdown-icon transition-transform"></i>
           </button>
-          <div id="mobile-home-submenu" class="mt-2 ml-4 pl-3 border-l-2 border-neutral-200 dark:border-neutral-800 space-y-2">
-            <a href="index.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-brand-charcoal py-1">
+          <div id="mobile-home-submenu" class="mt-2 ml-4 pl-3 border-l-2 border-amber-500 space-y-2">
+            <a href="index.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-600 py-1">
               Home 1: Classic Version
             </a>
             <a href="home-2.html" class="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-amber-600 py-1">
@@ -183,22 +183,22 @@
 
         <a href="about.html" class="text-base font-medium text-amber-600 dark:text-amber-400">About</a>
         <a href="services.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Services</a>
-        <a href="services.html#packages" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
+        <a href="packages.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Packages</a>
         <a href="contact.html" class="text-base font-medium text-neutral-700 dark:text-neutral-200 hover:text-amber-600 transition-colors">Contact</a>
       </nav>
     </div>
 
     <div class="pt-6 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
-      <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal rounded hover:opacity-90 transition-opacity">
+      <a href="booking.html" class="block w-full text-center py-3 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-charcoal dark:text-brand-ivory rounded hover:opacity-90 transition-opacity border border-transparent dark:border-neutral-700/60">
         Check Availability
       </a>
     </div>
   </div>
 
-  <main id="main-content" class="flex-1 pt-20">
+  <main id="main-content" class="flex-1">
 
     <!-- STUDIO PHILOSOPHY -->
-    <section class="py-24 bg-white dark:bg-neutral-950">
+    <section class="pt-32 pb-24 bg-white dark:bg-neutral-950">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="aspect-photo rounded-lg overflow-hidden relative shadow-xl">
@@ -298,6 +298,211 @@
             <p class="text-xs text-neutral-500 uppercase tracking-widest font-mono mt-1">Corporate & Drone Lead</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO NUMBERS -->
+    <section class="py-20 bg-brand-charcoal text-brand-ivory">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+          <div>
+            <div class="font-serif text-5xl font-light text-brand-accent mb-2">12+</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] font-mono text-neutral-400">Years in Business</div>
+          </div>
+          <div>
+            <div class="font-serif text-5xl font-light text-brand-accent mb-2">800+</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] font-mono text-neutral-400">Events Documented</div>
+          </div>
+          <div>
+            <div class="font-serif text-5xl font-light text-brand-accent mb-2">40+</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] font-mono text-neutral-400">Countries Covered</div>
+          </div>
+          <div>
+            <div class="font-serif text-5xl font-light text-brand-accent mb-2">100%</div>
+            <div class="text-[11px] uppercase tracking-[0.2em] font-mono text-neutral-400">Client Discretion</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS & RECOGNITION -->
+    <section class="py-24 bg-brand-ivory/30 dark:bg-neutral-900/40 border-t border-neutral-200/60 dark:border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col mb-14">
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Industry Recognition</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">Awards & Accolades</h2>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-3 max-w-xl">Honored by global industry bodies for creative excellence, technical innovation, and client satisfaction.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="trophy" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2024</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">International Wedding Film Award</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Gold · Best Cinematic Feature Film, IWFA Global Summit</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="star" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2023</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Junebug Weddings Top 50</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Named in the World's Best Wedding Photographers list</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="award" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2023</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Fearless Photographers Award</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Editorial Excellence · Emotion-Driven Storytelling Category</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="camera" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2022</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">WPPI Print Competition</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Platinum Award · Wedding & Portrait Photographers International</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="film" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2022</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Vow Videography Excellence</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Best Luxury Videography Studio · South Asia Region</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 bg-white dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 flex-shrink-0 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center">
+              <i data-lucide="medal" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono uppercase tracking-widest text-amber-700 dark:text-amber-400 mb-1">2021</div>
+              <h3 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">SLR Lounge Editor's Choice</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400">Master Lighting Technique · Fine Art Wedding Category</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TESTIMONIALS -->
+    <section class="py-24 bg-white dark:bg-neutral-950 border-t border-neutral-200/60 dark:border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Client Voices</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">What Our Clients Say</h2>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-3">Real words from couples, executives, and families who trusted us with their most important moments.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div class="bg-brand-ivory/40 dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 rounded-2xl p-7 flex flex-col gap-4">
+            <div class="flex gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed italic">
+              "Frame & Fable didn't just document our wedding — they made us feel like the stars of our own feature film. Every frame is a masterpiece we'll treasure forever."
+            </p>
+            <div class="flex items-center gap-3 mt-auto pt-4 border-t border-neutral-200/60 dark:border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=70" alt="Sophia & Marcus" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+              <div>
+                <div class="text-xs font-semibold text-brand-charcoal dark:text-brand-ivory">Sophia & Marcus R.</div>
+                <div class="text-[11px] text-neutral-500 font-mono">Tuscany Estate Wedding</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-ivory/40 dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 rounded-2xl p-7 flex flex-col gap-4">
+            <div class="flex gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed italic">
+              "We hired Frame & Fable for our global product launch gala. Their press-ready same-day delivery was flawless. Absolutely the gold standard in event photography."
+            </p>
+            <div class="flex items-center gap-3 mt-auto pt-4 border-t border-neutral-200/60 dark:border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=80&q=70" alt="CEO Jonathan" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+              <div>
+                <div class="text-xs font-semibold text-brand-charcoal dark:text-brand-ivory">Jonathan P., CEO</div>
+                <div class="text-[11px] text-neutral-500 font-mono">Dubai Executive Gala</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-ivory/40 dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 rounded-2xl p-7 flex flex-col gap-4">
+            <div class="flex gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500 text-amber-500"></i>
+            </div>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed italic">
+              "From the initial call to the leather album delivery — effortless, elegant, and completely exceeding expectations. Julian and his team are in a class of their own."
+            </p>
+            <div class="flex items-center gap-3 mt-auto pt-4 border-t border-neutral-200/60 dark:border-neutral-800">
+              <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=80&q=70" alt="Priya Mehta" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+              <div>
+                <div class="text-xs font-semibold text-brand-charcoal dark:text-brand-ivory">Priya & Arjun Mehta</div>
+                <div class="text-[11px] text-neutral-500 font-mono">Rajasthan Palace Wedding</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="py-24 bg-brand-charcoal relative overflow-hidden">
+      <!-- Ambient overlay -->
+      <div class="absolute inset-0 opacity-20">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1800&q=60" alt="" class="w-full h-full object-cover" aria-hidden="true">
+        <div class="absolute inset-0 bg-brand-charcoal/70"></div>
+      </div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs uppercase tracking-[0.2em] text-brand-accent font-mono font-semibold">Begin Your Story</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-ivory mt-4 mb-6 leading-snug">
+          Ready to Create Something<br class="hidden sm:block"> <span class="italic font-light text-amber-300">Unforgettable?</span>
+        </h2>
+        <p class="text-sm text-neutral-400 max-w-xl mx-auto mb-10 leading-relaxed">
+          Whether you're planning a luxury wedding, a high-society gala, or a private retreat — we'd love to hear about your vision and craft something extraordinary together.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="booking.html" class="min-w-[200px] px-8 py-4 text-xs uppercase tracking-widest font-semibold bg-brand-accent text-brand-charcoal hover:bg-amber-400 rounded transition-colors shadow-xl">
+            Check Availability
+          </a>
+          <a href="contact.html" class="min-w-[200px] px-8 py-4 text-xs uppercase tracking-widest font-semibold border border-brand-ivory/40 text-brand-ivory hover:bg-brand-ivory/10 rounded transition-colors">
+            Get in Touch
+          </a>
         </div>
       </div>
     </section>

@@ -45,38 +45,38 @@
     })();
   </script>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300 relative overflow-x-hidden">
+<body class="min-h-screen flex flex-col justify-between p-4 sm:p-6 bg-brand-ivory/30 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-300 relative overflow-x-hidden">
+
+  <!-- Top Bar: Logo on Left, Theme & RTL Controls on Right (Outside Card) -->
+  <header class="w-full max-w-5xl mx-auto flex items-center justify-between py-2 px-2 sm:px-4">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md">
+      <div class="w-8 h-8 sm:w-9 sm:h-9 bg-brand-charcoal text-brand-ivory flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-base group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
+        F
+      </div>
+      <div class="flex flex-col">
+        <span class="font-serif text-sm sm:text-base tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight">Frame & Fable</span>
+        <span class="text-[8px] sm:text-[9px] tracking-[0.2em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
+      </div>
+    </a>
+
+    <!-- Right Controls: Theme Toggle + RTL Toggle -->
+    <div class="flex items-center gap-2">
+      <!-- Theme Toggle Button -->
+      <button type="button" class="theme-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 shadow-sm" aria-label="Toggle theme" title="Toggle theme">
+        <i data-lucide="sun" class="theme-sun w-4 h-4 hidden"></i>
+        <i data-lucide="moon" class="theme-moon w-4 h-4"></i>
+      </button>
+      
+      <!-- RTL Toggle Button -->
+      <button type="button" class="rtl-toggle-btn w-9 h-9 border border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 shadow-sm" aria-label="Toggle RTL" title="Toggle RTL">
+        <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
 
   <!-- Main Compact Luxury Card Container -->
-  <main class="w-full max-w-lg bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-5 sm:p-7 shadow-2xl backdrop-blur-xl relative z-10 transition-all my-auto">
-
-    <!-- Card Header Bar: Logo on Left, Theme & RTL Controls on Right -->
-    <div class="flex items-center justify-between pb-3.5 mb-5 border-b border-neutral-200/80 dark:border-neutral-800/80 gap-3">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-md">
-        <div class="w-7 h-7 sm:w-8 sm:h-8 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal flex items-center justify-center rounded-full font-serif font-bold text-xs sm:text-base group-hover:scale-105 transition-transform shadow-sm flex-shrink-0">
-          F
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-xs sm:text-sm tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight">Frame & Fable</span>
-          <span class="text-[7px] sm:text-[8px] tracking-[0.2em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
-        </div>
-      </a>
-
-      <!-- Right Controls: Theme Toggle + RTL Toggle -->
-      <div class="flex items-center gap-1.5">
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn w-8 h-8 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle theme" title="Toggle theme">
-          <i data-lucide="sun" class="theme-sun w-3.5 h-3.5 hidden"></i>
-          <i data-lucide="moon" class="theme-moon w-3.5 h-3.5"></i>
-        </button>
-        
-        <!-- RTL Toggle Button -->
-        <button type="button" class="rtl-toggle-btn w-8 h-8 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle RTL" title="Toggle RTL">
-          <i data-lucide="arrow-left-right" class="w-3.5 h-3.5"></i>
-        </button>
-      </div>
-    </div>
+  <main class="w-full max-w-lg mx-auto bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl relative z-10 transition-all my-auto">
 
     <!-- Card Content -->
     <div class="text-center space-y-4">
@@ -89,21 +89,13 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-        <a href="index.html" class="w-full sm:w-auto px-6 py-2.5 bg-brand-charcoal text-brand-ivory dark:bg-brand-ivory dark:text-brand-charcoal hover:opacity-90 text-[11px] uppercase tracking-[0.18em] font-semibold rounded-lg shadow-md transition-all flex items-center justify-center gap-1.5">
+        <a href="index.html" class="w-full sm:w-auto px-6 py-2.5 bg-brand-charcoal text-brand-ivory dark:bg-brand-charcoal dark:text-brand-ivory hover:opacity-90 text-[11px] uppercase tracking-[0.18em] font-semibold rounded-lg shadow-md transition-all flex items-center justify-center gap-1.5 border border-transparent dark:border-neutral-700/60">
           <i data-lucide="home" class="w-3.5 h-3.5"></i>
           <span>Back to Home</span>
         </a>
         <a href="portfolio.html" class="w-full sm:w-auto px-6 py-2.5 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-[11px] uppercase tracking-[0.18em] font-semibold rounded-lg transition-all">
           View Portfolio
         </a>
-      </div>
-    </div>
-
-    <!-- Developed By Footer Credit -->
-    <div class="pt-4 mt-5 border-t border-neutral-200/80 dark:border-neutral-800/80 text-[11px] text-neutral-500 dark:text-neutral-400 text-center">
-      <div class="flex items-center justify-center gap-1 font-medium">
-        <span>Developed by</span>
-        <span class="font-semibold text-neutral-800 dark:text-neutral-200">Abhivorn Technologies Pvt. Ltd.</span>
       </div>
     </div>
 

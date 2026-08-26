@@ -3,8 +3,9 @@
    ========================================================================== */
 
 html.dark {
-  --color-primary: #F8ECD6;
-  --color-secondary: #102A43;
+  --color-primary: #102A43;
+  --color-secondary: #F8ECD6;
+  --color-accent: #D69D30;
   
   --bg-primary: #0D1F2F;
   --bg-secondary: #122C3F;
@@ -21,7 +22,6 @@ html.dark {
   --border-light: #1F2F47;
   color-scheme: dark;
 }
-
 html.dark body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -55,17 +55,5 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   transition-duration: 150ms;
 }
 
-/* Disable hover effects for Check Availability CTAs in dark theme */
-html.dark a[href="booking.html"]:hover,
-html.dark button[data-action="check-availability"]:hover,
-html.dark .btn-check-availability:hover {
-  opacity: 1 !important;
-  transform: none !important;
-}
 
-html.dark a[href="booking.html"].dark\:bg-brand-ivory:hover,
-html.dark a[href="booking.html"].bg-brand-ivory:hover {
-  background-color: #F8ECD6 !important;
-  color: #102A43 !important;
-}
 
