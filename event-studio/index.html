@@ -552,198 +552,130 @@
       </div>
     </section>
 
-    <!-- SECTION 5: THE EDITORIAL JOURNAL -->
+    <!-- SECTION 5: THE CURATED GALLERY -->
     <section class="py-24 bg-white dark:bg-neutral-950 border-t border-neutral-200/60 dark:border-neutral-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <div>
-            <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Behind The Lens</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">The Creative Journal</h2>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">Curated stories, location guides, and artistic insights from our recent destination assignments worldwide.</p>
+          <div class="max-w-2xl">
+            <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">A Curated Experience</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-4">
+              Featured Masterpieces
+            </h2>
+            <p class="text-neutral-600 dark:text-neutral-400 text-base mt-4 font-light">
+              Explore a handpicked selection of our most exquisite wedding, gala, and portrait commissions from around the globe. Each frame tells a story of elegance and timeless beauty.
+            </p>
           </div>
-          <div class="mt-4 md:mt-0">
-            <a href="contact.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-charcoal dark:text-brand-ivory hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
-              <span>View All Stories</span>
+          <div class="mt-8 md:mt-0">
+            <a href="portfolio.html" class="inline-flex items-center gap-2 px-6 py-3 border border-brand-charcoal/20 dark:border-neutral-700 rounded-lg text-xs uppercase tracking-widest font-semibold text-brand-charcoal dark:text-brand-ivory hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors">
+              <span>View Full Portfolio</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Masonry Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
           
-          <!-- Story 1 -->
-          <article class="group bg-brand-ivory/20 dark:bg-neutral-900/40 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-            <div class="aspect-[4/3] overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Lake Como Wedding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-brand-ivory text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">
-                Destination Feature
-              </span>
+          <!-- Item 1 (Large) -->
+          <a href="portfolio.html" class="group relative overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 shadow-lg touch-card">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80" alt="Luxury Wedding Portrait" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-semibold mb-2 block">Villa Erba, Italy</span>
+              <h3 class="font-serif text-2xl text-white">A Royal Symphony</h3>
             </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-3 text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mb-2">
-                  <span>Villa Balbiano, Italy</span>
-                  <span>•</span>
-                  <span>6 min read</span>
-                </div>
-                <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-2">
-                  Sun-Drenched Elegance on the Shores of Lake Como
-                </h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-3">
-                  How we engineered natural-light cinema sequences across three days of celebrations in a 16th-century Italian palazzo.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-neutral-200/60 dark:border-neutral-800/60 flex items-center justify-between">
-                <span class="text-xs font-semibold text-amber-700 dark:text-amber-400">Read Case Study →</span>
-                <span class="text-[10px] font-mono text-neutral-400">Editorial Edition #42</span>
-              </div>
-            </div>
-          </article>
+          </a>
 
-          <!-- Story 2 -->
-          <article class="group bg-brand-ivory/20 dark:bg-neutral-900/40 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-            <div class="aspect-[4/3] overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Tech Summit Keynote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-brand-ivory text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">
-                Corporate Cinema
-              </span>
+          <!-- Item 2 -->
+          <a href="portfolio.html" class="group relative overflow-hidden rounded-2xl shadow-lg touch-card">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Gala Details" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-semibold mb-1 block">Paris, France</span>
+              <h3 class="font-serif text-lg text-white">Haute Couture</h3>
             </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-3 text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mb-2">
-                  <span>Geneva, Switzerland</span>
-                  <span>•</span>
-                  <span>4 min read</span>
-                </div>
-                <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-2">
-                  Press-Ready in 60 Minutes: Live Global Gala Media
-                </h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-3">
-                  Deploying on-site colourists and mobile fiber uplinks to deliver pristine 4K highlight reels before the closing keynote ends.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-neutral-200/60 dark:border-neutral-800/60 flex items-center justify-between">
-                <span class="text-xs font-semibold text-amber-700 dark:text-amber-400">Read Case Study →</span>
-                <span class="text-[10px] font-mono text-neutral-400">Tech & Summit #18</span>
-              </div>
-            </div>
-          </article>
+          </a>
 
-          <!-- Story 3 -->
-          <article class="group bg-brand-ivory/20 dark:bg-neutral-900/40 border border-neutral-200/80 dark:border-neutral-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-            <div class="aspect-[4/3] overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=800&q=80" alt="Private Estate Celebration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-4 left-4 bg-brand-charcoal/80 backdrop-blur-md text-brand-ivory text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full">
-                Artisan Spotlight
-              </span>
+          <!-- Item 3 -->
+          <a href="portfolio.html" class="group relative overflow-hidden rounded-2xl shadow-lg touch-card">
+            <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=800&q=80" alt="Destination Elopement" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-semibold mb-1 block">Swiss Alps</span>
+              <h3 class="font-serif text-lg text-white">Winter Romance</h3>
             </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center gap-3 text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mb-2">
-                  <span>Florence Atelier</span>
-                  <span>•</span>
-                  <span>5 min read</span>
-                </div>
-                <h3 class="font-serif text-xl font-medium text-brand-charcoal dark:text-brand-ivory group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors mb-2">
-                  The Alchemy of Heirloom Leather & Silver Halide Prints
-                </h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-3">
-                  A tour inside our partner bookbindery in Tuscany where every wedding album is hand-stitched with museum-grade archival pigments.
-                </p>
-              </div>
-              <div class="pt-4 mt-4 border-t border-neutral-200/60 dark:border-neutral-800/60 flex items-center justify-between">
-                <span class="text-xs font-semibold text-amber-700 dark:text-amber-400">Read Case Study →</span>
-                <span class="text-[10px] font-mono text-neutral-400">Craft & Material #09</span>
-              </div>
+          </a>
+
+          <!-- Item 4 (Wide) -->
+          <a href="portfolio.html" class="group relative overflow-hidden rounded-2xl md:col-span-2 lg:col-span-1 shadow-lg touch-card">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Gala" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-brand-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-300 font-semibold mb-1 block">Geneva</span>
+              <h3 class="font-serif text-lg text-white">Executive Summit</h3>
             </div>
-          </article>
+          </a>
 
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION 6: HEIRLOOM DELIVERABLES & ARTISAN VAULT -->
-    <section class="py-24 bg-brand-ivory/30 dark:bg-neutral-900/40 border-t border-neutral-200/60 dark:border-neutral-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- SECTION 6: CLIENT LEGACY & PRAISES -->
+    <section class="py-24 bg-brand-ivory/40 dark:bg-neutral-900/40 border-t border-neutral-200/60 dark:border-neutral-800">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="mb-16">
+          <i data-lucide="quote" class="w-10 h-10 mx-auto text-amber-500/50 mb-6"></i>
+          <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Words of Praise</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-4">
+            A Legacy of Excellence
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
           
-          <div>
-            <span class="text-xs uppercase tracking-[0.2em] text-amber-700 dark:text-amber-400 font-mono font-semibold">Artisan Deliverables</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2 mb-6 leading-tight">
-              Tangible Memories Built to Outlast Generations
-            </h2>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
-              Digital files preserve the visual record, but handcrafted heirloom art creates an enduring family legacy. Every physical piece is individually curated and crafted by master artisans.
+          <!-- Testimonial 1 -->
+          <div class="p-8 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-6 opacity-10">
+              <i data-lucide="star" class="w-24 h-24 text-amber-500"></i>
+            </div>
+            <p class="font-serif text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 relative z-10">
+              "Working with Frame & Fable was a revelation. They didn't just document our celebration; they crafted a masterpiece that our family will treasure for generations. The discretion and professionalism of the crew was unparalleled."
             </p>
-
-            <div class="space-y-6">
-              
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/70 dark:border-neutral-800">
-                <div class="p-3 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex-shrink-0">
-                  <i data-lucide="book-open" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Italian Full-Grain Leather Albums</h4>
-                  <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">Hand-bound in Florence with seamless lay-flat spreads on 300gsm cotton rag archival paper rated for 200+ years.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/70 dark:border-neutral-800">
-                <div class="p-3 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex-shrink-0">
-                  <i data-lucide="film" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Engraved Walnut Cinema Vault Box</h4>
-                  <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">Custom solid walnut presentation case containing gold-plated USB archive holding full 4K ProRes master edits and RAW footage.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-neutral-200/70 dark:border-neutral-800">
-                <div class="p-3 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex-shrink-0">
-                  <i data-lucide="sparkles" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="font-serif text-base font-semibold text-brand-charcoal dark:text-brand-ivory mb-1">Private Cloud Gallery & Native App</h4>
-                  <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">Encrypted cloud delivery portal with 10-year cloud backup, mobile PIN download, and guest print ordering integration.</p>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="mt-10 flex flex-wrap items-center gap-4">
-              <a href="packages.html" class="px-6 py-3.5 text-xs uppercase tracking-widest font-semibold bg-brand-charcoal text-brand-ivory dark:bg-neutral-100 dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-white rounded transition-colors shadow-md">
-                Explore Packages
-              </a>
-              <a href="booking.html" class="px-6 py-3.5 text-xs uppercase tracking-widest font-semibold border border-brand-charcoal/30 dark:border-neutral-700 text-brand-charcoal dark:text-brand-ivory hover:bg-brand-charcoal/5 dark:hover:bg-neutral-800 rounded transition-colors">
-                Reserve Your Date
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4 relative">
-            <div class="space-y-4">
-              <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="Heirloom Book Bindery" class="w-full h-full object-cover">
-              </div>
-              <div class="p-5 rounded-2xl bg-brand-charcoal text-brand-ivory shadow-lg">
-                <span class="text-2xl font-serif font-light text-brand-accent block mb-1">200+</span>
-                <span class="text-[11px] font-mono uppercase tracking-wider text-neutral-300">Year Archival Longevity</span>
-              </div>
-            </div>
-            <div class="space-y-4 pt-8">
-              <div class="p-5 rounded-2xl bg-amber-500 text-brand-charcoal shadow-lg">
-                <span class="text-xs font-mono uppercase tracking-widest font-bold block mb-1">Master Craftsmanship</span>
-                <p class="text-xs font-serif font-medium leading-relaxed">Individually embossed with custom copper foil monogramming</p>
-              </div>
-              <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Fine Art Album Showcase" class="w-full h-full object-cover">
+            <div class="flex items-center gap-4 relative z-10">
+              <div class="w-12 h-12 rounded-full bg-brand-charcoal flex items-center justify-center text-white font-serif text-lg">E</div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-brand-ivory">Eleanor & James</h4>
+                <span class="text-[11px] uppercase tracking-wider text-neutral-500 font-mono">Château de Vaux-le-Vicomte</span>
               </div>
             </div>
           </div>
 
+          <!-- Testimonial 2 -->
+          <div class="p-8 rounded-2xl bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-6 opacity-10">
+              <i data-lucide="star" class="w-24 h-24 text-amber-500"></i>
+            </div>
+            <p class="font-serif text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 relative z-10">
+              "Their ability to capture the intimate, unseen moments amidst a 500-guest gala is nothing short of magical. The final cinema reel felt like a Hollywood premiere. Absolutely breathtaking work."
+            </p>
+            <div class="flex items-center gap-4 relative z-10">
+              <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center text-white font-serif text-lg">A</div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-charcoal dark:text-brand-ivory">Alexander V.</h4>
+                <span class="text-[11px] uppercase tracking-wider text-neutral-500 font-mono">Global Tech Summit, Geneva</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="mt-16 text-center">
+          <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-charcoal dark:bg-white text-white dark:text-brand-charcoal text-xs uppercase tracking-widest font-semibold rounded shadow-xl hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
+            Start Your Legacy
+          </a>
         </div>
 
       </div>

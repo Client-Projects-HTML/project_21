@@ -251,19 +251,18 @@
         </p>
 
         <!-- Hero Actions: Private Consultation & Showreel Trigger -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+        <div class="flex flex-col sm:flex-row items-center sm:items-stretch justify-center gap-4 sm:gap-5">
           
-          <a href="booking.html" class="touch-card w-full sm:w-auto min-w-[220px] px-8 py-4 bg-brand-accent text-white hover:bg-amber-600 text-xs uppercase tracking-[0.2em] font-semibold rounded shadow-xl transition-all flex items-center justify-center gap-2">
+          <a href="booking.html" class="touch-card w-full sm:w-[320px] px-6 py-4 bg-brand-accent text-white hover:bg-amber-600 text-xs uppercase tracking-[0.2em] font-semibold rounded shadow-xl transition-all flex items-center justify-center gap-2">
             <i data-lucide="sparkles" class="w-4 h-4 flex-shrink-0"></i>
-            <span>Request VIP Consultation</span>
+            <span class="text-center leading-relaxed">Request VIP Consultation</span>
           </a>
 
-          <!-- Showreel Modal Trigger Button -->
-          <button type="button" id="open-showreel-btn" class="touch-card w-full sm:w-auto min-w-[220px] px-8 py-4 bg-brand-charcoal/10 hover:bg-brand-charcoal/20 dark:bg-white/10 dark:hover:bg-white/20 backdrop-blur-md border border-neutral-300 dark:border-white/30 text-brand-charcoal dark:text-white text-xs uppercase tracking-[0.2em] font-semibold rounded transition-all flex items-center justify-center gap-2.5">
+          <button type="button" id="open-showreel-btn" class="touch-card w-full sm:w-[320px] px-6 py-4 bg-brand-charcoal/10 hover:bg-brand-charcoal/20 dark:bg-white/10 dark:hover:bg-white/20 backdrop-blur-md border border-neutral-300 dark:border-white/30 text-brand-charcoal dark:text-white text-xs uppercase tracking-[0.2em] font-semibold rounded transition-all flex items-center justify-center gap-2.5">
             <span class="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center flex-shrink-0">
               <i data-lucide="play" class="w-3 h-3 fill-white ml-0.5"></i>
             </span>
-            <span>Watch Studio Showreel</span>
+            <span class="text-center leading-relaxed">Watch Studio Showreel</span>
           </button>
         </div>
 
@@ -520,183 +519,152 @@
       </div>
     </section>
 
-    <!-- SECTION 3: GLOBAL DESTINATION COMMISSIONS -->
-    <section class="py-24 bg-white dark:bg-neutral-950 border-t border-neutral-200/60 dark:border-neutral-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <div>
-            <span class="text-xs uppercase tracking-[0.2em] font-mono text-amber-600 dark:text-amber-400 font-semibold">Worldwide Footprint</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-2">
-              Signature Global Destinations
-            </h2>
-            <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-3 font-light max-w-2xl">
-              From historic Italian palazzos to secluded Alpine chalets, our international production logistics ensure seamless multi-camera coverage anywhere in the world.
-            </p>
-          </div>
-          <div class="mt-4 md:mt-0 flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 text-xs font-mono">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              40+ Countries Covered
-            </span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- SECTION 3: THE VIP CONCIERGE EXPERIENCE -->
+    <section class="py-24 bg-brand-charcoal text-brand-ivory relative overflow-hidden">
+      <!-- Abstract ambient backdrop -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 -mr-48 -mt-48 w-[800px] h-[800px] bg-amber-900/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-48 -mb-48 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          <!-- Destination 1 -->
-          <div class="touch-card group relative rounded-2xl overflow-hidden shadow-md bg-neutral-900 aspect-[3/4] flex flex-col justify-end p-6">
-            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Lake Como, Italy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
-            <div class="relative z-10">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold mb-1 block">45.99° N, 9.26° E</span>
-              <h3 class="font-serif text-xl font-medium text-white mb-2">Lake Como & Amalfi</h3>
-              <p class="text-xs text-neutral-300 line-clamp-2 mb-3">Palazzo estates, private boat cinema sequences, and sunset golden hour light.</p>
-              <div class="flex items-center gap-2 text-[10px] font-mono text-neutral-400">
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Villa Balbiano</span>
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Villa d'Este</span>
+          <div>
+            <span class="text-xs uppercase tracking-[0.25em] font-mono text-brand-accent font-semibold">White-Glove Service</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white mt-4 mb-6 leading-tight">
+              The Ultimate VIP Concierge Experience
+            </h2>
+            <p class="text-neutral-300 text-sm font-light leading-relaxed mb-10">
+              For high-net-worth individuals and high-society galas, discretion and seamless logistics are as vital as the final images. We operate with strict NDAs, encrypted delivery, and zero footprint.
+            </p>
+
+            <div class="space-y-8">
+              
+              <!-- Feature 1 -->
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-amber-500">
+                  <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-white mb-2">Absolute Discretion & NDAs</h4>
+                  <p class="text-xs text-neutral-400 leading-relaxed">
+                    Ironclad confidentiality agreements, zero unapproved social media presence, and completely invisible on-site footprints.
+                  </p>
+                </div>
               </div>
+
+              <!-- Feature 2 -->
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-amber-500">
+                  <i data-lucide="lock" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-white mb-2">Encrypted Vault Delivery</h4>
+                  <p class="text-xs text-neutral-400 leading-relaxed">
+                    End-to-end encryption for all digital masters via secure private cloud links and air-gapped physical drives delivered by courier.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-amber-500">
+                  <i data-lucide="gem" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-white mb-2">Dedicated Styling & Art Direction</h4>
+                  <p class="text-xs text-neutral-400 leading-relaxed">
+                    Our team includes an on-set art director and styling assistant to ensure every gown, tuxedo lapel, and floral arrangement is meticulously positioned.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- Destination 2 -->
-          <div class="touch-card group relative rounded-2xl overflow-hidden shadow-md bg-neutral-900 aspect-[3/4] flex flex-col justify-end p-6">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps, St. Moritz" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
-            <div class="relative z-10">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold mb-1 block">46.49° N, 9.83° E</span>
-              <h3 class="font-serif text-xl font-medium text-white mb-2">St. Moritz & Gstaad</h3>
-              <p class="text-xs text-neutral-300 line-clamp-2 mb-3">Alpine winter weddings, high-altitude drone cinema, and private chalet galas.</p>
-              <div class="flex items-center gap-2 text-[10px] font-mono text-neutral-400">
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Badrutt's Palace</span>
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Engadin</span>
+          <!-- Right side visual -->
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+              <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=800&q=80" alt="VIP Concierge Details" class="absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-8 left-8 right-8">
+                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-xl">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-mono uppercase tracking-widest text-white">Status: Vault Secured</span>
+                  </div>
+                  <p class="text-[11px] text-neutral-300 font-mono">Archive #774-A ready for private client courier.</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- Destination 3 -->
-          <div class="touch-card group relative rounded-2xl overflow-hidden shadow-md bg-neutral-900 aspect-[3/4] flex flex-col justify-end p-6">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="French Riviera & Paris" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             
-            <div class="relative z-10">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold mb-1 block">43.71° N, 7.26° E</span>
-              <h3 class="font-serif text-xl font-medium text-white mb-2">French Riviera & Paris</h3>
-              <p class="text-xs text-neutral-300 line-clamp-2 mb-3">Cap d'Antibes yachts, historic Loire Valley châteaux, and Haute Couture galas.</p>
-              <div class="flex items-center gap-2 text-[10px] font-mono text-neutral-400">
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Hotel du Cap</span>
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Chantilly</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Destination 4 -->
-          <div class="touch-card group relative rounded-2xl overflow-hidden shadow-md bg-neutral-900 aspect-[3/4] flex flex-col justify-end p-6">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai & Rajasthan" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            
-            <div class="relative z-10">
-              <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold mb-1 block">25.20° N, 55.27° E</span>
-              <h3 class="font-serif text-xl font-medium text-white mb-2">Dubai & Rajasthan</h3>
-              <p class="text-xs text-neutral-300 line-clamp-2 mb-3">Royal palace weddings in Udaipur and desert architectural summits in the Emirates.</p>
-              <div class="flex items-center gap-2 text-[10px] font-mono text-neutral-400">
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">City Palace</span>
-                <span class="px-2 py-0.5 rounded bg-white/10 backdrop-blur-xs">Burj Al Arab</span>
+            <!-- Floating element -->
+            <div class="absolute -right-8 top-16 bg-brand-charcoal border border-amber-500/30 p-4 rounded-xl shadow-2xl hidden md:block">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-500">
+                  <i data-lucide="check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-widest text-neutral-400 font-mono mb-1">Clearance</div>
+                  <div class="text-sm font-semibold text-white">Level 1 NDA Active</div>
+                </div>
               </div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- SECTION 4: THE MASTER PRODUCTION SUITE & CINEMA OPTICS -->
-    <section class="py-24 bg-brand-charcoal text-brand-ivory relative overflow-hidden">
-      <!-- Ambient light effect -->
-      <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- SECTION 4: CINEMATIC BEHIND-THE-SCENES -->
+    <section class="py-24 bg-brand-ivory/30 dark:bg-neutral-950 border-t border-neutral-200/60 dark:border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-[0.25em] font-mono text-brand-accent font-semibold">Technical Precision</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-ivory mt-2">
-            The Cinema Production Suite
+          <span class="text-xs uppercase tracking-[0.25em] font-mono text-amber-600 dark:text-amber-400 font-semibold">The Making Of</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-brand-charcoal dark:text-brand-ivory mt-4">
+            Mastering The Light
           </h2>
-          <p class="text-neutral-400 text-sm mt-3 font-light leading-relaxed">
-            We operate exclusively with cinema-standard optical packages and proprietary color workflows calibrated to reproduce authentic skin tones and fine fabric textures.
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm mt-4 font-light leading-relaxed">
+            Take a glimpse behind the curtain. Watch how our master cinematographers and lighting directors engineer breathtaking visuals in real-time, from sweeping aerials to intimate macro details.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Tech 1 -->
-          <div class="touch-card p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-brand-accent flex items-center justify-center mb-6">
-                <i data-lucide="camera" class="w-6 h-6"></i>
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-neutral-200 dark:border-neutral-800">
+          <div class="aspect-video relative">
+            <img src="https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?auto=format&fit=crop&w=1600&q=80" alt="Behind the scenes film crew" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90 dark:opacity-70">
+            <div class="absolute inset-0 bg-brand-charcoal/30 group-hover:bg-brand-charcoal/40 transition-colors duration-500"></div>
+            
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+              <div class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:bg-amber-500 group-hover:border-amber-500 transition-all duration-300">
+                <i data-lucide="play" class="w-8 h-8 fill-current ml-1"></i>
               </div>
-              <span class="text-[10px] font-mono uppercase tracking-widest text-brand-accent block mb-1">Medium Format Stills</span>
-              <h3 class="font-serif text-xl font-semibold text-white mb-3">Hasselblad 100MP Optics</h3>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                16-bit color depth delivering 15 stops of dynamic range — capturing intimate fabric lace details, jewelry refractions, and tonal nuances impossible on consumer cameras.
-              </p>
+              <span class="mt-6 text-sm font-semibold uppercase tracking-widest text-white font-mono drop-shadow-md">
+                Play BTS Featurette
+              </span>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-neutral-400">
-              <span>Resolution: 11,656 × 8,742</span>
-              <span>16-Bit RAW</span>
+            
+            <!-- Tech details overlay -->
+            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div class="flex gap-4">
+                <span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded text-[10px] font-mono text-white border border-white/10 uppercase tracking-widest">Arri Alexa Mini LF</span>
+                <span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded text-[10px] font-mono text-white border border-white/10 uppercase tracking-widest">Zeiss Supreme Primes</span>
+              </div>
+              <span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded text-[10px] font-mono text-white border border-white/10 uppercase tracking-widest">4K • 2.39:1</span>
             </div>
           </div>
-
-          <!-- Tech 2 -->
-          <div class="touch-card p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-brand-accent flex items-center justify-center mb-6">
-                <i data-lucide="video" class="w-6 h-6"></i>
-              </div>
-              <span class="text-[10px] font-mono uppercase tracking-widest text-brand-accent block mb-1">Hollywood Motion</span>
-              <h3 class="font-serif text-xl font-semibold text-white mb-3">RED V-Raptor 8K Cinema</h3>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                Paired with vintage Cooke Anamorphic primes to create organic film grain, painterly horizontal flares, and an unmistakably cinematic widescreen aesthetic.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-neutral-400">
-              <span>Codec: 8K ProRes 4444 XQ</span>
-              <span>2.39:1 Scope</span>
-            </div>
-          </div>
-
-          <!-- Tech 3 -->
-          <div class="touch-card p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-brand-accent flex items-center justify-center mb-6">
-                <i data-lucide="mic" class="w-6 h-6"></i>
-              </div>
-              <span class="text-[10px] font-mono uppercase tracking-widest text-brand-accent block mb-1">Spatial Audio Suite</span>
-              <h3 class="font-serif text-xl font-semibold text-white mb-3">Ambisonic 3D Sound Capture</h3>
-              <p class="text-xs text-neutral-300 leading-relaxed">
-                Micro-concealed wireless Schoeps microphones capture vows, speeches, and ambient room acoustics with pristine studio clarity, masterfully mixed for home cinema systems.
-              </p>
-            </div>
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-neutral-400">
-              <span>Sampling: 32-bit Float 192kHz</span>
-              <span>Dolby Atmos Ready</span>
-            </div>
-          </div>
-
         </div>
 
         <!-- Call to action bar -->
-        <div class="mt-16 p-8 rounded-2xl bg-gradient-to-r from-amber-500/20 via-brand-accent/20 to-amber-500/20 border border-brand-accent/30 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div class="mt-16 p-8 rounded-2xl bg-brand-charcoal dark:bg-neutral-900 border border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-xl">
           <div>
-            <h4 class="font-serif text-xl font-semibold text-white">Experience the Distinction in Person</h4>
-            <p class="text-xs text-neutral-300 mt-1">Book a private screening room consultation at our studio or via 4K live stream.</p>
+            <h4 class="font-serif text-xl font-semibold text-white">Experience the Distinction</h4>
+            <p class="text-xs text-neutral-400 mt-2">Commission our studio for your upcoming legacy event.</p>
           </div>
-          <a href="booking.html" class="px-8 py-3.5 bg-brand-accent text-brand-charcoal text-xs uppercase tracking-widest font-bold rounded-lg hover:bg-amber-400 transition-colors shadow-xl flex-shrink-0">
-            Book VIP Consultation
+          <a href="booking.html" class="px-8 py-4 bg-brand-accent text-white text-xs uppercase tracking-widest font-bold rounded hover:bg-amber-600 transition-colors shadow-lg flex-shrink-0 touch-card">
+            Request VIP Consultation
           </a>
         </div>
 

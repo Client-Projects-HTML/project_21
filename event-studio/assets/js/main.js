@@ -88,6 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       link.classList.remove('nav-link-active', 'border-b-2', 'border-brand-charcoal', 'dark:border-brand-ivory', 'pb-0.5', 'text-brand-charcoal', 'dark:text-brand-ivory', 'bg-neutral-100', 'dark:bg-neutral-800');
 
+      // Restore default colors for non-active links (if not a dropdown item)
+      if (!link.classList.contains('dropdown-item')) {
+        link.classList.add('text-neutral-600', 'dark:text-neutral-300');
+      }
+
       let isMatch = false;
       if (linkHash) {
         // Anchor link (e.g., services.html#packages): only highlight if exact hash matches
@@ -106,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             parentBtn.classList.add('text-brand-charcoal', 'dark:text-brand-ivory', 'font-semibold');
           }
         } else {
+          // Remove default colors to prevent Tailwind CSS conflicts
+          link.classList.remove('text-neutral-600', 'dark:text-neutral-300');
           link.classList.add('border-b-2', 'border-brand-charcoal', 'dark:border-brand-ivory', 'pb-0.5', 'text-brand-charcoal', 'dark:text-brand-ivory');
         }
       }

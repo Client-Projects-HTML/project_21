@@ -10,33 +10,6 @@ const FooterComponent = {
 
     footerContainer.className = "bg-brand-ivory text-brand-charcoal border-t border-neutral-200 transition-colors duration-300 mt-auto dark:bg-neutral-950 dark:text-neutral-300 dark:border-neutral-900";
     footerContainer.innerHTML = `
-      <!-- PRE-FOOTER CTA SECTION WITH LUXURY BACKDROP IMAGE -->
-      <div class="relative overflow-hidden py-24 sm:py-28 px-4 sm:px-6 lg:px-8 text-center bg-brand-charcoal text-brand-ivory border-t border-b border-neutral-200/20 dark:border-neutral-900">
-        <!-- Background Image with Clean, Balanced Contrast Overlay -->
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=90" alt="Luxury celebration and event cinematography" class="w-full h-full object-cover object-center opacity-80 dark:opacity-65 scale-105 transition-transform duration-1000 brightness-105 contrast-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/55 dark:from-black/85 dark:via-black/50 dark:to-black/70"></div>
-          <div class="absolute inset-0 bg-radial from-transparent via-black/10 to-black/40"></div>
-        </div>
-
-        <div class="relative z-10 max-w-4xl mx-auto space-y-4">
-          <span class="inline-block text-xs uppercase tracking-[0.25em] text-amber-300 dark:text-brand-accent font-mono px-4 py-1.5 rounded-full border border-amber-400/40 dark:border-brand-accent/40 bg-black/60 dark:bg-black/70 backdrop-blur-md shadow-sm">
-            Start Your Experience
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-white dark:text-brand-ivory drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-            Let's Create Something Beautiful.
-          </h2>
-          <p class="text-neutral-100 dark:text-neutral-200 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
-            Have an upcoming wedding, event, or celebration? Let's talk about your vision.
-          </p>
-          <div class="pt-4">
-            <a href="booking.html" class="inline-block px-9 py-4 text-xs uppercase tracking-[0.2em] font-semibold bg-brand-charcoal text-brand-ivory dark:bg-brand-charcoal dark:text-brand-ivory hover:opacity-90 rounded shadow-2xl transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-neutral-600/60 dark:border-neutral-700/60">
-              Check Availability
-            </a>
-          </div>
-        </div>
-      </div>
-
       <!-- MAIN 4-COLUMN FOOTER CONTENT -->
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -48,8 +21,8 @@ const FooterComponent = {
                 F
               </div>
               <div class="flex flex-col">
-                <span class="font-serif text-sm sm:text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight sm:leading-normal">Capture Studio</span>
-                <span class="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Frame & Fable</span>
+                <span class="font-serif text-sm sm:text-xl tracking-wider font-semibold uppercase text-brand-charcoal dark:text-brand-ivory leading-tight sm:leading-normal">Frame & Fable</span>
+                <span class="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-neutral-500 dark:text-neutral-400 uppercase font-sans">Studio</span>
               </div>
             </a>
             <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -129,7 +102,7 @@ const FooterComponent = {
 
         <!-- FOOTER BOTTOM BAR -->
         <div class="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 text-center text-xs text-neutral-500">
-          <p>&copy; 2026 Capture Studio. All rights reserved.</p>
+          <p>&copy; 2026 Frame & Fable Studio. All rights reserved.</p>
         </div>
       </div>
     `;
