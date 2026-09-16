@@ -71,20 +71,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2.1 Active Navigation Link Highlighting
   function hydrateActiveNavLinks() {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    // Normalize current path: strip .html for Vercel cleanUrls compatibility
+    const rawCurrentPath = window.location.pathname.split('/').pop() || 'index';
+    const currentPath = rawCurrentPath.replace(/\.html$/, '') || 'index';
     const currentHash = window.location.hash || '';
     const navLinks = document.querySelectorAll('.site-header nav a, #mobile-menu-drawer nav a');
-    
+
+    // Normalize a link href path by stripping .html extension
+    function normalizePath(p) {
+      return (p || '').replace(/\.html$/, '') || 'index';
+    }
+
     // Check if any anchor link specifically matches the current path and hash
     const hasHashMatch = Array.from(navLinks).some(link => {
       const rawHref = link.getAttribute('href') || '';
       const [linkPath, linkHash] = rawHref.split('#');
-      return linkHash && linkPath === currentPath && currentHash === '#' + linkHash;
+      return linkHash && normalizePath(linkPath) === currentPath && currentHash === '#' + linkHash;
     });
 
     navLinks.forEach(link => {
       const rawHref = link.getAttribute('href') || '';
       const [linkPath, linkHash] = rawHref.split('#');
+      const normalizedLinkPath = normalizePath(linkPath);
 
       link.classList.remove('nav-link-active', 'border-b-2', 'border-brand-charcoal', 'dark:border-brand-ivory', 'pb-0.5', 'text-brand-charcoal', 'dark:text-brand-ivory', 'bg-neutral-100', 'dark:bg-neutral-800');
 
@@ -96,10 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
       let isMatch = false;
       if (linkHash) {
         // Anchor link (e.g., services.html#packages): only highlight if exact hash matches
-        isMatch = (linkPath === currentPath) && (currentHash === '#' + linkHash);
+        isMatch = (normalizedLinkPath === currentPath) && (currentHash === '#' + linkHash);
       } else {
-        // Main page link (e.g., services.html): highlight only if no specific hash link matched
-        isMatch = (linkPath === currentPath && !hasHashMatch) || ((currentPath === '' || currentPath === 'index.html') && linkPath === 'index.html' && !hasHashMatch);
+        // Main page link: highlight only if no specific hash link matched
+        isMatch = (normalizedLinkPath === currentPath && !hasHashMatch) || ((currentPath === '' || currentPath === 'index') && normalizedLinkPath === 'index' && !hasHashMatch);
       }
 
       if (isMatch) {
